@@ -44,7 +44,9 @@ class Menu extends Model
         ];
 
         foreach ($data as $item) {
-            $optionsArray[$item->id] = $item->name;
+            if($item->parent_id != null){
+                $optionsArray[$item->id] = $item->name;
+            }
         }
 
         return $optionsArray;

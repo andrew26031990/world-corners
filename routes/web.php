@@ -25,10 +25,14 @@ Auth::routes();
 
 Route::get('/', [MainController::class, 'index']); //Get to main page
 Route::get('/about', [MainController::class, 'about']); //Get to about page
-Route::get('/gallery', [MainController::class, 'about']); //Get to about page
-Route::get('/contacts', [MainController::class, 'about']); //Get to about page
-Route::get('/{slug}', [LocationController::class, 'location']);
+Route::get('/gallery', [MainController::class, 'gallery']); //Get to about page
+Route::get('/contacts', [MainController::class, 'contacts']); //Get to about page
+Route::get('/{slug}', [LocationController::class, 'locations']);
+Route::get('/{slug}/{location}', [LocationController::class, 'location']);
 //Admin
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth');
-Route::resource('menus', App\Http\Controllers\MenuController::class)->middleware('auth');
-Route::resource('locations', App\Http\Controllers\LocationController::class)->middleware('auth');
+Route::group(['prefix' => 'admin','middleware' => 'auth'],function (){
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::resource('menus', App\Http\Controllers\MenuController::class);
+    Route::resource('locations', App\Http\Controllers\LocationController::class);
+});
+

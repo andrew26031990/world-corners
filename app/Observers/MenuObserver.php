@@ -9,11 +9,11 @@ class MenuObserver
 {
     public function creating(Menu $menu): void
     {
-        $menu->slug = Str::slug($menu->name);
+        $menu->slug = '/'.Str::slug($menu->name);
     }
 
     public function updating(Menu $menu): void
     {
-        $menu->slug = Str::slug($menu->name);
+        $menu->slug = '/'.Str::slug($menu->name);
     }
 }

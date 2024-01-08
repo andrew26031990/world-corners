@@ -92,7 +92,6 @@ class LocationController extends AppBaseController
      */
     public function update($id, UpdateLocationRequest $request) //$id, UpdateLocationRequest $request
     {
-        dd($request);
         $location = $this->locationRepository->find($id);
 
         if (empty($location)) {

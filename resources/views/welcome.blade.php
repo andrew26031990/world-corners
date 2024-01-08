@@ -24,6 +24,15 @@
             user-select: none;
         }
 
+        a {
+            color: #FFA500
+        }
+
+        #cygroup {
+            font-family: 'Dancing Script', cursive;
+            text-decoration: none;
+        }
+
         @media (min-width: 768px) {
             .bd-placeholder-img-lg {
                 font-size: 3.5rem;
@@ -33,6 +42,9 @@
 
 
     <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="{{asset('blog/blog.css')}}" rel="stylesheet">
@@ -46,7 +58,7 @@
                 <a class="link-secondary" href="#">Subscribe</a>
             </div>
             <div class="col-4 text-center">
-                <a class="blog-header-logo text-dark" href="/">{{config('app.name')}}</a>
+                <a class="blog-header-logo text-dark" id="cygroup" href="/">{{config('app.name')}}</a>
             </div>
             <div class="col-4 d-flex justify-content-end align-items-center">
                 <a class="link-secondary" href="#" aria-label="Search">
@@ -100,7 +112,7 @@
                     @endif
                 </div>
                 <div class="col-auto d-none d-lg-block">
-                    <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                    <img src="{{asset('thumbnail.png')}}" />
                 </div>
             </div>
         </div>
@@ -121,8 +133,7 @@
                     @endif
                 </div>
                 <div class="col-auto d-none d-lg-block">
-                    <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
+                    <img src="{{asset('thumbnail.png')}}" />
                 </div>
             </div>
         </div>
