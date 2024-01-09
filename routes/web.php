@@ -23,12 +23,16 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/', [MainController::class, 'index']); //Get to main page
-Route::get('/about', [MainController::class, 'about']); //Get to about page
-Route::get('/gallery', [MainController::class, 'gallery']); //Get to about page
-Route::get('/contacts', [MainController::class, 'contacts']); //Get to about page
-Route::get('/{slug}', [LocationController::class, 'locations']);
-Route::get('/{slug}/{location}', [LocationController::class, 'location']);
+//Pages
+Route::group(['prefix' => 'pages','middleware' => 'auth'],function (){
+    Route::get('/', [MainController::class, 'index']); //Get to main page
+    Route::get('/about', [MainController::class, 'about']); //Get to about page
+    Route::get('/gallery', [MainController::class, 'gallery']); //Get to about page
+    Route::get('/contacts', [MainController::class, 'contacts']); //Get to about page
+    Route::get('/{slug}', [LocationController::class, 'locations']);
+    Route::get('/{slug}/{location}', [LocationController::class, 'location']);
+});
+
 //Admin
 Route::group(['prefix' => 'admin','middleware' => 'auth'],function (){
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
