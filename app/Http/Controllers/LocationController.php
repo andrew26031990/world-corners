@@ -45,7 +45,7 @@ class LocationController extends AppBaseController
      */
     public function store(CreateLocationRequest $request)
     {
-        $input = $request->all();
+        $input = $request->except('slug');
 
         $location = $this->locationRepository->create($input);
 
