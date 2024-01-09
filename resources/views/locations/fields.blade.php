@@ -57,7 +57,7 @@
 <!-- Img Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('img', 'Картинка локации:') !!}
-    {!! Form::file('img', null, ['class' => 'form-control', 'required', 'type' => 'file']) !!}
+    {!! Form::file('img', null, ['class' => 'form-control', 'type' => 'file']) !!}
 </div>
 
 <script>
