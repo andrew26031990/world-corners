@@ -6,9 +6,8 @@
     </h3>
     @foreach($locations as $location)
         <article class="blog-post">
-            <h2 class="blog-post-title">{{$location->title}}</h2>
+            <h2 class="blog-post-title"><a href="{{$location->slug}}">{{$location->title}}</a></h2>
             <p class="blog-post-meta">{{\Carbon\Carbon::parse($location->created_at)->format('F j, Y')}}</p>
-
             {!! $location->short_text !!}
         </article>
         <hr>
