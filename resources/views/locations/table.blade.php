@@ -15,7 +15,7 @@
             @foreach($locations as $location)
                 <tr>
                     <td>{{ $location->menu_id }}</td>
-                    <td>{{ $location->title }}</td>
+                    <td><a href="{{ $location->slug }}">{{ $location->title }}</a></td>
                     <td>{{ $location->slug }}</td>
                     <td>{{ $location->latitude }}</td>
                     <td>{{ $location->longitude }}</td>
