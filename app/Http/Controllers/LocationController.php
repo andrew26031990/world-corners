@@ -100,7 +100,7 @@ class LocationController extends AppBaseController
             return redirect(route('locations.index'));
         }
 
-        $location = $this->locationRepository->update($request->all(), $id);
+        $location = $this->locationRepository->update($request->all(), $id)->except('slug');
 
         Flash::success('Location updated successfully.');
 
