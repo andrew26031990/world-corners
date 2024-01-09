@@ -29,7 +29,7 @@
 <!-- Text Field -->
 <div class="form-group col-sm-12 col-lg-12">
     {!! Form::label('text', 'Text:') !!}
-    {!! Form::textarea('text', null, ['class' => 'form-control', 'required', 'maxlength' => 65535, 'maxlength' => 65535]) !!}
+    {!! Form::textarea('text', null, ['class' => 'form-control', 'maxlength' => 65535, 'maxlength' => 65535]) !!}
 </div>
 
 <!-- Short Text Field -->
@@ -89,7 +89,7 @@
     ClassicEditor
         .create( document.querySelector( '#text' ) )
         .then( editor => {
-            //console.log( editor );
+            console.log( editor );
         } )
         .catch( error => {
             console.error( error );
