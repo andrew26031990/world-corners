@@ -45,7 +45,7 @@ class LocationController extends AppBaseController
      */
     public function store(CreateLocationRequest $request)
     {
-        $input = $request->except('slug');
+        $input = $request->all();
 
         $location = $this->locationRepository->create($input);
 
@@ -100,7 +100,7 @@ class LocationController extends AppBaseController
             return redirect(route('locations.index'));
         }
 
-        $location = $this->locationRepository->update($request->all(), $id)->except('slug');
+        $location = $this->locationRepository->update($request->all(), $id);
 
         Flash::success('Location updated successfully.');
 

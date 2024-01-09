@@ -11,12 +11,12 @@ class LocationObserver
     public function creating(Location $location): void
     {
         $menu = Menu::whereId($location->menu_id)->first();
-        $location->slug = '/'.$menu->slug.'/'.Str::slug($location->title);
+        $location->slug = $menu->slug.'/'.Str::slug($location->title);
     }
 
     public function updating(Location $location): void
     {
         $menu = Menu::whereId($location->menu_id)->first();
-        $location->slug = '/'.$menu->slug.'/'.Str::slug($location->title);
+        $location->slug = $menu->slug.'/'.Str::slug($location->title);
     }
 }
