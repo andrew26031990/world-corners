@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CreateLocationRequest;
 use App\Http\Requests\UpdateLocationRequest;
 use App\Http\Controllers\AppBaseController;
+use App\Models\Location;
 use App\Models\Menu;
 use App\Repositories\LocationRepository;
 use Illuminate\Http\Request;
@@ -25,9 +26,10 @@ class LocationController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $locations = $this->locationRepository->paginate(10);
+        $locations = Location::paginate(10);
+        $allMenu = Menu::getDataForSelect();
 
-        return view('locations.index')
+        return view('locations.index', compact('allMenu'))
             ->with('locations', $locations);
     }
 

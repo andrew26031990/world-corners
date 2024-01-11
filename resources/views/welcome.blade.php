@@ -171,7 +171,7 @@
 </main>
 
 <footer class="blog-footer">
-    <p>This blog is about world corners. <a href="/">{{app()->env('APP_NAME')}}</a>.
+    <p>This blog is about world corners. <a href="/">{{config('app.name')}}</a>.
     </p>
     <p>
         <a href="#">Back to top</a>

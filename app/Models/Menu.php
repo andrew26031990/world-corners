@@ -49,7 +49,7 @@ class Menu extends Model
                     $optionsArray[$item->id] = $item->name;
                 }
             }else{
-                if($item->parent_id != null){
+                if($item->parent_id != null || $item->id == 11 || $item->id == 12){
                     $optionsArray[$item->id] = $item->name;
                 }
             }

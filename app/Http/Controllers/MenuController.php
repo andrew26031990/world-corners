@@ -40,7 +40,7 @@ class MenuController extends AppBaseController
      */
     public function create(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
     {
-        $allMenu = Menu::getDataForSelect();
+        $allMenu = Menu::getDataForSelect(true);
         return view('menus.create', compact('allMenu'));
     }
 
@@ -80,7 +80,7 @@ class MenuController extends AppBaseController
     public function edit($id)
     {
         $menu = $this->menuRepository->find($id);
-        $allMenu = Menu::getDataForSelect();
+        $allMenu = Menu::getDataForSelect(true);
 
         if (empty($menu)) {
             Flash::error('Категория не найдена');

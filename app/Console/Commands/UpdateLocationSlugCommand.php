@@ -31,7 +31,7 @@ class UpdateLocationSlugCommand extends Command
         $locations = Location::all();
         foreach ($locations as $location){
             $menu = Menu::whereId($location->menu_id)->first();
-            $location->slug = '/'.$menu->slug.'/'.Str::slug($location->title);
+            $location->slug = $menu->slug.'/'.Str::slug($location->title);
             $location->save();
         }
     }

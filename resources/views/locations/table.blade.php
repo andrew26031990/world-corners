@@ -14,7 +14,7 @@
             <tbody>
             @foreach($locations as $location)
                 <tr>
-                    <td>{{ $location->menu_id }}</td>
+                    <td>{{ $allMenu[$location->menu_id] ?? '' }}</td>
                     <td><a href="{{ $location->slug }}" target="_blank">{{ $location->title }}</a></td>
                     <td>{{ $location->slug }}</td>
                     <td>{{ $location->latitude }}</td>
