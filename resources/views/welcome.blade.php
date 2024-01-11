@@ -48,6 +48,14 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="{{asset('blog/blog.css')}}" rel="stylesheet">
+
+    <!-- SAPE RTB JS -->
+    <script
+        async="async"
+        src="https://cdn-rtb.sape.ru/rtb-b/js/868/2/137868.js"
+        type="text/javascript">
+    </script>
+    <!-- SAPE RTB END -->
 </head>
 <body>
 
