@@ -35,7 +35,7 @@ class Menu extends Model
         return $this->hasMany(\App\Models\Location::class, 'menu_id');
     }
 
-    public static function getDataForSelect(): array
+    public static function getDataForSelect($is_index = false): array
     {
         $data = self::all();
 
@@ -44,8 +44,14 @@ class Menu extends Model
         ];
 
         foreach ($data as $item) {
-            if($item->parent_id != null){
-                $optionsArray[$item->id] = $item->name;
+            if($is_index){
+                if($item->parent_id == null){
+                    $optionsArray[$item->id] = $item->name;
+                }
+            }else{
+                if($item->parent_id != null){
+                    $optionsArray[$item->id] = $item->name;
+                }
             }
         }
 

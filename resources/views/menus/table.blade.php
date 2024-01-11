@@ -13,7 +13,7 @@
             <tbody>
             @foreach($menus as $menu)
                 <tr>
-                    <td>{{ $allMenu[$menu->parent_id] }}</td>
+                    <td>{{ $allMenu[$menu->parent_id] ?? '' }}</td>
                     <td>{{ $menu->name }}</td>
                     <td>{{ $menu->slug }}</td>
                     <td>{{ $menu->is_active ? 'Активен' : 'Неактивен' }}</td>

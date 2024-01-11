@@ -29,7 +29,7 @@ class MenuController extends AppBaseController
     public function index(Request $request)
     {
         $menus = $this->menuRepository->paginate(10);
-        $allMenu = Menu::getDataForSelect();
+        $allMenu = Menu::getDataForSelect(true);
 
         return view('menus.index',
             compact('allMenu', 'menus'));
