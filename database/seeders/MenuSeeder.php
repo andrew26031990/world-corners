@@ -6,6 +6,7 @@ use App\Models\Menu;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Schema;
 
 class MenuSeeder extends Seeder
 {
@@ -14,6 +15,7 @@ class MenuSeeder extends Seeder
      */
     public function run(): void
     {
+        Schema::disableForeignKeyConstraints();
         Menu::truncate();
         if(config('app.locale') == 'ru'){
             Menu::withoutEvents(function () {
