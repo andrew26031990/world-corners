@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Location;
 use App\Models\Menu;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class LocationController extends Controller
 {
@@ -24,6 +25,19 @@ class LocationController extends Controller
     {
         $locationSlug = '/'.$slug.'/'.$location;
         $location = Location::whereSlug($locationSlug)->firstOrFail();
+
+        if(Str::contains($locationSlug, 'cities')){
+            return view('pages.main.city', compact('location'));
+        }
+
+        if(Str::contains($locationSlug, 'oceans')){
+            return view('pages.main.oceans', compact('location'));
+        }
+
+        if(Str::contains($locationSlug, 'seas')){
+            return view('pages.main.seas', compact('location'));
+        }
+
         return view('pages.main.location', compact('location'));
     }
 

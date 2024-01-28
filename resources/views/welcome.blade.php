@@ -3,9 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.88.1">
+    <meta name="description" content="{{$location->description ?? "Исследуйте уголки мира, погрузитесь в культуру, природу и достопримечательности разных городов и стран."}}">
+    <meta name="keywords" content="{{$location->keywords ?? "уголки мира, путешествия, география, культура, достопримечательности, природа, города."}}">
+    <meta name="author" content="Andrew Magzumov">
+
     <title>{{config('app.name')}}</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/blog/">
@@ -116,10 +117,10 @@
                     @php $articleTop1 = getArticles()[0] ?? null @endphp
                     @if(isset($articleTop1))
                         <strong class="d-inline-block mb-2 text-primary">World</strong>
-                        <h3 class="mb-0">{{$articleTop1->title}}</h3>
+                        <h6 class="mb-0">{{$articleTop1->title}}</h6>
                         <div
                             class="mb-1 text-muted">{{\Carbon\Carbon::parse($articleTop1->created_at)->format('M d')}}</div>
-                        <p class="card-text mb-auto">{{\Str::limit($articleTop1->short_text, 91)}}</p>
+                        <p class="card-text mb-auto">{{\Str::limit($articleTop1->short_text, 81)}}</p>
                         <a href="{{$articleTop1->slug}}" class="stretched-link">Continue reading</a>
                     @else
                         <h1 class="display-4 fst-italic">Title of a longer featured blog post</h1>
@@ -139,16 +140,16 @@
                     @php $articleTop2 = getArticles()[1] ?? null @endphp
                     @if(isset($articleTop2))
                         <strong class="d-inline-block mb-2 text-primary">World</strong>
-                        <h3 class="mb-0">{{$articleTop2->title}}</h3>
+                        <h6 class="mb-0">{{$articleTop2->title}}</h6>
                         <div
                             class="mb-1 text-muted">{{\Carbon\Carbon::parse($articleTop2->created_at)->format('M d')}}</div>
                         <p class="card-text mb-auto">{{\Str::limit($articleTop2->short_text, 91)}}</p>
-                        <a href="{{$articleTop2->slug}}" class="stretched-link">Continue reading</a>
+                        <a href="{{$articleTop2->slug}}" class="stretched-link">Продолжить чтение</a>
                     @else
                         <h1 class="display-4 fst-italic">Title of a longer featured blog post</h1>
                         <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly
                             and efficiently about what’s most interesting in this post’s contents.</p>
-                        <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p>
+                        <p class="lead mb-0"><a href="#" class="text-white fw-bold">Продолжить чтение</a></p>
                     @endif
                 </div>
                 <div class="col-auto d-none d-lg-block">
@@ -164,7 +165,7 @@
         </div>
 
         <div class="col-md-4">
-            @include('pages.layouts.sidebar')
+            @yield('sidebar')
         </div>
     </div>
 
