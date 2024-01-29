@@ -14,3 +14,20 @@
         <hr>
     @endforeach
 @endsection
+@section('sidebar')
+    <div class="position-sticky" style="top: 2rem;">
+        {{--<div class="p-4 mb-3 bg-light rounded">
+            <!-- SAPE RTB DIV ADAPTIVE -->
+            <div id="SRTB_807900"></div>
+            <!-- SAPE RTB END -->
+        </div>--}}
+
+        @include('pages.layouts.articles')
+
+        {{--<div class="p-4">
+            <!-- SAPE RTB DIV ADAPTIVE -->
+            <div id="SRTB_807892"></div>
+            <!-- SAPE RTB END -->
+        </div>--}}
+    </div>
+@endsection
