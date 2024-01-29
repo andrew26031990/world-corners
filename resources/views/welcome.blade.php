@@ -175,16 +175,6 @@
     <p>This blog is about world corners. <a href="/">{{config('app.name')}}</a>.
     </p>
     <p>
-        <!-- HostCiti.net --><a href="http://hostciti.net/" title="hostciti.net" target="_blank" onclick="this.href='http://hostciti.net/stat/?ch=stat'+'&r='+escape(window.location.href.slice(7));" >
-            <script type="text/javascript" language="javascript"><!--
-Coun='<img src="http://hostciti.net/stat/stat.php?i=150&col=a63818&tc=ffffff';
-                iD=document; Coun+='&d='+(screen.colorDepth?screen.colorDepth:screen.pixelDepth)
-                    +"&w="+screen.width+'&h='+screen.height;
-                iH=window.location.href.slice(7);
-                Coun+='&r='+escape(iH);
-                Coun+='&n='+escape(iD.referrer.slice(7));
-                iD.write(Coun+'" width="76" height="21" border="0" />');
-            </script></a><!-- End of HostCiti.net counter -->
         <a href="#">Back to top</a>
     </p>
 </footer>
