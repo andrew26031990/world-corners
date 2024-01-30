@@ -4,30 +4,37 @@
     <h3 class="pb-4 mb-4 fst-italic border-bottom">
         From the Firehose
     </h3>
-    @foreach($locations as $location)
+    @foreach($locations as $key => $location)
         <article class="blog-post">
             <h2 class="blog-post-title"><a href="{{$location->slug}}">{{$location->title}}</a></h2>
             <p class="blog-post-meta">{{\Carbon\Carbon::parse($location->created_at)->format('F j, Y')}}</p>
 
             {!! $location->short_text !!}
         </article>
+        @if($key == 1)
+            <div style="width: 100%; height: 100px">
+                <!-- SAPE RTB DIV ADAPTIVE -->
+                <div id="SRTB_879967"></div>
+                <!-- SAPE RTB END -->
+            </div>
+        @endif
         <hr>
     @endforeach
 @endsection
 @section('sidebar')
     <div class="position-sticky" style="top: 2rem;">
-        {{--<div class="p-4 mb-3 bg-light rounded">
+        <div class="p-4 mb-3 bg-light rounded">
             <!-- SAPE RTB DIV ADAPTIVE -->
-            <div id="SRTB_807900"></div>
+            <div id="SRTB_879969"></div>
             <!-- SAPE RTB END -->
-        </div>--}}
+        </div>
 
         @include('pages.layouts.articles')
 
-        {{--<div class="p-4">
+        <div class="p-4">
             <!-- SAPE RTB DIV ADAPTIVE -->
-            <div id="SRTB_807892"></div>
+            <div id="SRTB_879971"></div>
             <!-- SAPE RTB END -->
-        </div>--}}
+        </div>
     </div>
 @endsection
