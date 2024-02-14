@@ -6,6 +6,7 @@
     <meta name="description" content="{{$location->description ?? "Исследуйте уголки мира, погрузитесь в культуру, природу и достопримечательности разных городов и стран."}}">
     <meta name="keywords" content="{{$location->keywords ?? "уголки мира, путешествия, география, культура, достопримечательности, природа, города."}}">
     <meta name="author" content="Andrew Magzumov">
+    <meta name="octoclick-verification" content="5398c64971658027e189c4dbb666a6f4">
 
     <title>{{config('app.name')}}</title>
 
