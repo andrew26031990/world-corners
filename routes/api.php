@@ -41,13 +41,13 @@ Route::get('get_places', function (){
 Route::get('random-url', function (){
     $location = DB::table('locations')->inRandomOrder()->first();
     return response()->json([
-        'url' => config('APP_URL').$location->slug
+        'url' => config('app.url').$location->slug
     ]);
 });
 
 Route::get('random-title', function (){
     $location = DB::table('locations')->inRandomOrder()->first();
     return response()->json([
-        'url' => config('APP_URL').$location->title
+        'title' => config('app.url').$location->title
     ]);
 });
