@@ -2,6 +2,7 @@
 
 use App\Models\Location;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
 
@@ -35,4 +36,18 @@ Route::get('get_places', function (){
         ]);
     }
     return 'Done';
+});
+
+Route::get('random-url', function (){
+    $location = DB::table('locations')->inRandomOrder()->first();
+    return response()->json([
+        'url' => config('APP_URL').$location->slug
+    ]);
+});
+
+Route::get('random-title', function (){
+    $location = DB::table('locations')->inRandomOrder()->first();
+    return response()->json([
+        'url' => config('APP_URL').$location->title
+    ]);
 });
