@@ -48,6 +48,6 @@ Route::get('random-url', function (){
 Route::get('random-title', function (){
     $location = DB::table('locations')->inRandomOrder()->first();
     return response()->json([
-        'title' => config('app.url').$location->title
+        'title' => $location->title
     ]);
 });
