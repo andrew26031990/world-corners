@@ -48,6 +48,7 @@ Route::get('random-url', function (){
 Route::get('random-title', function (){
     $location = DB::table('locations')->inRandomOrder()->first();
     return response()->json([
-        'title' => $location->title
+        'title' => $location->title,
+        'cutted-title' => explode(":", $location->title)[0]
     ]);
 });
