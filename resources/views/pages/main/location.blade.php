@@ -6,7 +6,7 @@
     </h3>
 
     <article class="blog-post">
-        <p class="blog-post-meta">{{\Carbon\Carbon::parse($location->created_at)->format('F j, Y')}}</p>
+        <p class="blog-post-meta">{{ \Carbon\Carbon::parse($location->created_at)->format('F j, Y') }}</p>
 
         @php
             $textLength = mb_strlen($location->text, 'UTF-8');
