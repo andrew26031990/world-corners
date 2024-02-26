@@ -7,6 +7,7 @@
 
     <article class="blog-post">
         <p class="blog-post-meta">{{\Carbon\Carbon::parse($location->created_at)->format('F j, Y')}}</p>
+
         @php
             $textLength = mb_strlen($location->text, 'UTF-8');
             $halfLength = ceil($textLength / 2);
@@ -19,13 +20,17 @@
                 $secondHalf = mb_substr($location->text, $halfLength, $textLength - $halfLength, 'UTF-8');
             }
         @endphp
+
         {!! $firstHalf !!}
+
         <div style="width: 100%; height: 150px">
             <!-- SAPE RTB DIV ADAPTIVE -->
             <div id="SRTB_807887"></div>
             <!-- SAPE RTB END -->
         </div>
+
         {!! $secondHalf !!}
+
     </article>
 
     <div style="margin-bottom: 15px"></div>
