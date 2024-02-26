@@ -21,7 +21,7 @@
             }
         @endphp
 
-        {!! \Str::prepend($firstHalf, '<') !!}
+        {!! '<' . $firstHalf !!}
 
         <div style="width: 100%; height: 150px">
             <!-- SAPE RTB DIV ADAPTIVE -->
