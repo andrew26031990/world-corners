@@ -8,7 +8,6 @@
     <article class="blog-post">
         <p class="blog-post-meta">{{ \Carbon\Carbon::parse($location->created_at)->format('F j, Y') }}</p>
 
-        sdfdsfdsfs
         @php
             $textLength = mb_strlen($location->text, 'UTF-8');
             $halfLength = ceil($textLength / 2);
