@@ -67,7 +67,7 @@
     ymaps.ready(function () {
         var map = new ymaps.Map('map', {
             center: [{{$location->latitude ?? '55.755814'}}, {{$location->longitude ?? '37.617635'}}],
-            zoom: 10
+            zoom: 15
         });
 
         map.events.add('wheel', function (e) {
