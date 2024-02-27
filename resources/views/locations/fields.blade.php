@@ -61,9 +61,11 @@
 </div>
 
 <script>
+    console.log('Lon: ' + {{$location->longitude}});
+    console.log('Lat: ' + {{$location->latitude}});
     ymaps.ready(function () {
         var map = new ymaps.Map('map', {
-            center: [{{$location->latitude ?? '55.755814'}}, {{$location->longitude ?? '37.617635'}}],
+            center: [{{$location->longitude ?? '55.755814'}}, {{$location->latitude ?? '37.617635'}}],
             zoom: 10
         });
 
