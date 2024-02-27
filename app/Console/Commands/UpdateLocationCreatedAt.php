@@ -30,7 +30,13 @@ class UpdateLocationCreatedAt extends Command
         $locations = Location::all(); // Get all locations
 
         foreach ($locations as $location) {
-            $randomDate = Carbon::createFromDate(2022, 1, 1)->random(Carbon::now());
+            $startDate = Carbon::createFromDate(2022, 1, 1)->startOfDay();
+            $endDate = Carbon::now();
+
+            $randomTimestamp = mt_rand($startDate->timestamp, $endDate->timestamp);
+
+            $randomDate = Carbon::createFromTimestamp($randomTimestamp);
+
             $location->created_at = $randomDate;
             $location->save();
 
