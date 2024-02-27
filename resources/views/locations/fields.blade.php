@@ -63,7 +63,7 @@
 <script>
     ymaps.ready(function () {
         var map = new ymaps.Map('map', {
-            center: [{{$location->latitude ?? '55.755814'}}, {{$location->latitude ?? '37.617635'}}],
+            center: [{{$location->latitude ?? '55.755814'}}, {{$location->longitude ?? '37.617635'}}],
             zoom: 10
         });
 
