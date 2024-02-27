@@ -82,8 +82,8 @@
                 var firstGeoObject = result.geoObjects.get(0);
                 document.getElementById('title').value = firstGeoObject.getAddressLine();
             });
-            document.getElementById('latitude').value = coords[1];
-            document.getElementById('longitude').value = coords[0];
+            document.getElementById('latitude').value = coords[0];
+            document.getElementById('longitude').value = coords[1];
         });
     });
 </script>
