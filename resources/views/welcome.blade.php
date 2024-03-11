@@ -159,7 +159,7 @@
                     @endif
                 </div>
                 <div class="col-auto d-none d-lg-block">
-                    <img src="{{asset('thumbnail.png')}}"/>
+                    <img src="{{asset('thumbnail.png')}}" alt="World Corners"/>
                 </div>
             </div>
         </div>
@@ -182,7 +182,7 @@
                     @endif
                 </div>
                 <div class="col-auto d-none d-lg-block">
-                    <img src="{{asset('thumbnail.png')}}"/>
+                    <img src="{{asset('thumbnail.png')}}" alt="World Corners"/>
                 </div>
             </div>
         </div>
