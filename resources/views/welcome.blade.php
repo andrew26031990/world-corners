@@ -25,6 +25,9 @@
     <meta property="og:image" content="{{asset('thumbnail.png')}}" />
     <meta property="og:url" content="{{config('app.url').$location->slug ?? "/"}}" />
 
+    <meta name="datePublished" content="{{$location->created_at ?? \Carbon\Carbon::now()}}">
+    <meta name="dateModified" content="{{$location->updated_at ?? \Carbon\Carbon::now()}}">
+
     <title>{{$location->title ?? config('app.name')}}</title>
 
     <link rel="icon" type="image/png" href="{{asset('blog/favicon.ico')}}" sizes="32x32">
