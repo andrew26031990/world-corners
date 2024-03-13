@@ -163,7 +163,7 @@
                     @endif
                 </div>
                 <div class="col-auto d-none d-lg-block">
-                    <img src="{{asset('thumbnail.webp')}}" width="200" height="250" alt="World Corners"/>
+                    <img src="{{asset('thumbnail.webp')}}" loading="lazy" width="200" height="250" alt="World Corners"/>
                 </div>
             </div>
         </div>
@@ -186,7 +186,7 @@
                     @endif
                 </div>
                 <div class="col-auto d-none d-lg-block">
-                    <img src="{{asset('thumbnail.webp')}}" width="200" height="250" alt="World Corners"/>
+                    <img src="{{asset('thumbnail.webp')}}" loading="lazy" width="200" height="250" alt="World Corners"/>
                 </div>
             </div>
         </div>
