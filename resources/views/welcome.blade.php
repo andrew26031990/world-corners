@@ -18,9 +18,13 @@
     <meta name="author" content="Andrew Magzumov">
     <meta name="octoclick-verification" content="5398c64971658027e189c4dbb666a6f4">
 
+    <meta property="og:title" content="{{$location->title ?? config('app.name')}}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="{{asset('thumbnail.png')}}" />
+    <meta property="og:url" content="{{$location->slug ?? "/"}}" />
+
     <title>{{$location->title ?? config('app.name')}}</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/blog/">
     <link rel="icon" type="image/png" href="{{asset('blog/favicon.ico')}}" sizes="32x32">
 
 
