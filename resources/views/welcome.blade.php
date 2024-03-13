@@ -26,7 +26,7 @@
     <title>{{$location->title ?? config('app.name')}}</title>
 
     <link rel="icon" type="image/png" href="{{asset('blog/favicon.ico')}}" sizes="32x32">
-
+    <link rel="canonical" href="{{config('app.url').$location->slug ?? "/"}}" />
 
     <!-- Bootstrap core CSS -->
     <link href="{{asset('blog/bootstrap.min.css')}}" rel="stylesheet">
