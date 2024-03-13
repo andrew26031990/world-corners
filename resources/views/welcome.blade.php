@@ -21,7 +21,7 @@
     <meta property="og:title" content="{{$location->title ?? config('app.name')}}" />
     <meta property="og:type" content="article" />
     <meta property="og:image" content="{{asset('thumbnail.png')}}" />
-    <meta property="og:url" content="{{$location->slug ?? "/"}}" />
+    <meta property="og:url" content="{{config('app.url').$location->slug ?? "/"}}" />
 
     <title>{{$location->title ?? config('app.name')}}</title>
 
