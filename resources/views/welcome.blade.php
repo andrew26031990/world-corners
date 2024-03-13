@@ -17,9 +17,8 @@
     <meta name="keywords" content="{{$location->keywords ?? "уголки мира, путешествия, география, культура, достопримечательности, природа, города."}}">
     <meta name="author" content="Andrew Magzumov">
     <meta name="octoclick-verification" content="5398c64971658027e189c4dbb666a6f4">
-
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="robots" content="index, follow">
-
     <meta property="og:title" content="{{$location->title ?? config('app.name')}}" />
     <meta property="og:type" content="article" />
     <meta property="og:image" content="{{asset('thumbnail.png')}}" />
