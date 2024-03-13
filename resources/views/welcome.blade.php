@@ -34,7 +34,7 @@
     <link rel="canonical" href="{{config('app.url')}}" />
 
     <!-- Bootstrap core CSS -->
-    <link href="{{mix('blog/bootstrap.min.css')/* asset('blog/bootstrap.min.css')*/}}" rel="stylesheet">
+    <link href="{{asset('blog/bootstrap.min.css')}}" rel="stylesheet">
 
     <style>
         a {
@@ -58,7 +58,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="{{mix('blog/blog.css')/* asset('blog/blog.css')*/}}" rel="stylesheet">
+    <link href="{{asset('blog/blog.css')}}" rel="stylesheet">
 
     <!-- SAPE RTB JS -->
     <script
