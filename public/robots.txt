@@ -1,6 +1,4 @@
 User-agent: *
-
-User-agent: Googlebot
 Allow: /public/
 
 Sitemap: https://world-corners.ru/sitemap.xml
