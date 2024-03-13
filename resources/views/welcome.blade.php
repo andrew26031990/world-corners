@@ -23,14 +23,15 @@
     <meta property="og:type" content="article" />
     <meta property="og:image" content="{{asset('thumbnail.png')}}" />
     <meta property="og:url" content="{{config('app.url').$location->slug ?? "/"}}" />
-
-    <meta name="datePublished" content="{{$location->created_at ?? \Carbon\Carbon::now()}}">
-    <meta name="dateModified" content="{{$location->updated_at ?? \Carbon\Carbon::now()}}">
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:site_name" content="World Corners" />
+    <meta name="Published" content="{{$location->created_at ?? \Carbon\Carbon::now()}}">
+    <meta name="Modified" content="{{$location->updated_at ?? \Carbon\Carbon::now()}}">
 
     <title>{{$location->title ?? config('app.name')}}</title>
 
     <link rel="icon" type="image/png" href="{{asset('blog/favicon.ico')}}" sizes="32x32">
-    <link rel="canonical" href="{{config('app.url').$location->slug ?? "/"}}" />
+    <link rel="canonical" href="{{config('app.url')}}" />
 
     <!-- Bootstrap core CSS -->
     <link href="{{asset('blog/bootstrap.min.css')}}" rel="stylesheet">
