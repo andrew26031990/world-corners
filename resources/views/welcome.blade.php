@@ -21,7 +21,7 @@
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="{{$location->title ?? config('app.name')}}" />
     <meta property="og:type" content="article" />
-    <meta property="og:image" content="{{asset('thumbnail.png')}}" />
+    <meta property="og:image" content="{{asset('thumbnail.webp')}}" />
     <meta property="og:url" content="{{config('app.url').$location->slug ?? "/"}}" />
     <meta property="og:locale" content="ru_RU" />
     <meta property="og:site_name" content="World Corners" />
@@ -34,7 +34,7 @@
     <link rel="canonical" href="{{config('app.url')}}" />
 
     <!-- Bootstrap core CSS -->
-    <link href="{{asset('blog/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{mix('blog/bootstrap.min.css')/* asset('blog/bootstrap.min.css')*/}}" rel="stylesheet">
 
     <style>
         a {
@@ -58,7 +58,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="{{asset('blog/blog.css')}}" rel="stylesheet">
+    <link href="{{mix('blog/blog.css')/* asset('blog/blog.css')*/}}" rel="stylesheet">
 
     <!-- SAPE RTB JS -->
     <script
@@ -163,7 +163,7 @@
                     @endif
                 </div>
                 <div class="col-auto d-none d-lg-block">
-                    <img src="{{asset('thumbnail.png')}}" alt="World Corners"/>
+                    <img src="{{asset('thumbnail.webp')}}" width="200" height="250" alt="World Corners"/>
                 </div>
             </div>
         </div>
@@ -186,7 +186,7 @@
                     @endif
                 </div>
                 <div class="col-auto d-none d-lg-block">
-                    <img src="{{asset('thumbnail.png')}}" alt="World Corners"/>
+                    <img src="{{asset('thumbnail.webp')}}" width="200" height="250" alt="World Corners"/>
                 </div>
             </div>
         </div>
