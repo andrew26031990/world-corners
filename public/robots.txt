@@ -1,2 +1,8 @@
 User-agent: *
-Disallow:
+Disallow: /private/
+
+User-agent: Googlebot
+Allow: /public/
+Disallow: /private/
+
+Sitemap: https://world-corners.ru/sitemap.xml
