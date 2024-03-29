@@ -183,7 +183,7 @@
                         <p class="lead mb-0"><a href="#" class="text-white fw-bold">Продолжить чтение</a></p>
                     @endif
                 </div>
-                <div class="col-auto d-none d-lg-block" style="width: 100%;">
+                <div class="col-auto d-none d-lg-block" style="width: 50%;">
                     <!-- SAPE RTB DIV ADAPTIVE -->
                     <div id="SRTB_888043"></div>
                     <!-- SAPE RTB END -->
