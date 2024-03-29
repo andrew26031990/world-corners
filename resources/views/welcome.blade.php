@@ -157,7 +157,7 @@
                         <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p>
                     @endif
                 </div>
-                <div class="col-auto d-none d-lg-block">
+                <div class="col-auto d-none d-lg-block" style="width: 100%;height: 250px">
                     <!-- SAPE RTB DIV ADAPTIVE -->
                     <div id="SRTB_888041" style="width: 100%;height: 250px"></div>
                     <!-- SAPE RTB END -->
@@ -183,7 +183,7 @@
                         <p class="lead mb-0"><a href="#" class="text-white fw-bold">Продолжить чтение</a></p>
                     @endif
                 </div>
-                <div class="col-auto d-none d-lg-block">
+                <div class="col-auto d-none d-lg-block" style="width: 100%;height: 250px">
                     <!-- SAPE RTB DIV ADAPTIVE -->
                     <div id="SRTB_888043" style="width: 100%;height: 250px"></div>
                     <!-- SAPE RTB END -->
