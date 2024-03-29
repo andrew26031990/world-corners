@@ -157,9 +157,9 @@
                         <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p>
                     @endif
                 </div>
-                <div class="col-auto d-none d-lg-block" style="width: 100%;height: 250px">
+                <div class="col-auto d-none d-lg-block" style="width: 50%;">
                     <!-- SAPE RTB DIV ADAPTIVE -->
-                    <div id="SRTB_888041" style="width: 100%;height: 250px"></div>
+                    <div id="SRTB_888041"></div>
                     <!-- SAPE RTB END -->
                     {{--<img src="{{asset('thumbnail.webp')}}" loading="lazy" width="200" height="250" alt="World Corners"/>--}}
                 </div>
@@ -183,9 +183,9 @@
                         <p class="lead mb-0"><a href="#" class="text-white fw-bold">Продолжить чтение</a></p>
                     @endif
                 </div>
-                <div class="col-auto d-none d-lg-block" style="width: 100%;height: 250px">
+                <div class="col-auto d-none d-lg-block" style="width: 100%;">
                     <!-- SAPE RTB DIV ADAPTIVE -->
-                    <div id="SRTB_888043" style="width: 100%;height: 250px"></div>
+                    <div id="SRTB_888043"></div>
                     <!-- SAPE RTB END -->
                     {{--<img src="{{asset('thumbnail.webp')}}" loading="lazy" width="200" height="250" alt="World Corners"/>--}}
                 </div>
