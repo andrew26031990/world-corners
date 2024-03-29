@@ -158,7 +158,10 @@
                     @endif
                 </div>
                 <div class="col-auto d-none d-lg-block">
-                    <img src="{{asset('thumbnail.webp')}}" loading="lazy" width="200" height="250" alt="World Corners"/>
+                    <!-- SAPE RTB DIV ADAPTIVE -->
+                    <div id="SRTB_888041"></div>
+                    <!-- SAPE RTB END -->
+                    {{--<img src="{{asset('thumbnail.webp')}}" loading="lazy" width="200" height="250" alt="World Corners"/>--}}
                 </div>
             </div>
         </div>
@@ -181,7 +184,10 @@
                     @endif
                 </div>
                 <div class="col-auto d-none d-lg-block">
-                    <img src="{{asset('thumbnail.webp')}}" loading="lazy" width="200" height="250" alt="World Corners"/>
+                    <!-- SAPE RTB DIV ADAPTIVE -->
+                    <div id="SRTB_888043"></div>
+                    <!-- SAPE RTB END -->
+                    {{--<img src="{{asset('thumbnail.webp')}}" loading="lazy" width="200" height="250" alt="World Corners"/>--}}
                 </div>
             </div>
         </div>
