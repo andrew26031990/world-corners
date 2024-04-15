@@ -187,7 +187,7 @@
                     <!-- SAPE RTB DIV ADAPTIVE -->
                     <div id="SRTB_888043"></div>
                     <!-- SAPE RTB END -->
-                    {{--<img src="{{asset('thumbnail.webp')}}" loading="lazy" width="200" height="250" alt="World Corners"/>--}}
+                    <img src="" loading="lazy" width="200" height="250" alt="World Corners"/>
                 </div>
             </div>
         </div>

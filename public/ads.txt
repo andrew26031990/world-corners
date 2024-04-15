@@ -49,3 +49,10 @@ smartyads.com, 100001, RESELLER, fd2bde0ff2e62c5d
 admixer.co.kr,1538,RESELLER
 google.com, pub-2843405949989126, DIRECT, f08c47fec0942fa0
 rtbsape.com, 1661423, DIRECT
+betweendigital.com, 45907, DIRECT
+vidoomy.com, 9148331, RESELLER
+contextweb.com, 562827, RESELLER, 89ff185a4c4e857c
+smartadserver.com, 4467, RESELLER
+richaudience.com, 4AoWPWXbVu, RESELLER
+xapads.com, 144307, RESELLER
+lunamedia.io, bfacf5e017bb11edb41173b0ca2c748c, RESELLER, 524ecb396915caaf
