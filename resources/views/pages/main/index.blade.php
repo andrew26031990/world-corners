@@ -23,7 +23,7 @@
 @endsection
 @section('sidebar')
     <div class="position-sticky" style="top: 2rem;">
-        <div class="p-4 mb-3 bg-light rounded">
+        <div class="p-4 mb-3 bg-light rounded" style="width: 100%;height: 177px">
             <!-- SAPE RTB DIV ADAPTIVE -->
             <div id="SRTB_879969"></div>
             <!-- SAPE RTB END -->
