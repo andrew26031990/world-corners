@@ -22,7 +22,7 @@
     <meta property="og:title" content="{{$location->title ?? config('app.name')}}" />
     <meta property="og:type" content="article" />
     <meta property="og:image" content="{{asset('thumbnail.webp')}}" />
-    <meta property="og:url" content="{{config('app.url').$location->slug ?? "/"}}" />
+    <meta property="og:url" content="{{$location ? config('app.url').$location->slug : "/"}}" />
     <meta property="og:locale" content="ru_RU" />
     <meta property="og:site_name" content="World Corners" />
     <meta name="Published" content="{{$location->created_at ?? \Carbon\Carbon::now()}}">
@@ -35,6 +35,8 @@
 
     <!-- Bootstrap core CSS -->
     <link href="{{asset('blog/bootstrap.min.css')}}" rel="stylesheet">
+
+    <script src="https://richinfo.co/richpartners/in-page/js/richads-ob.js?pubid=925717&siteid=346676" async></script>
 
     <style>
         a {
