@@ -148,7 +148,7 @@
 
     <div class="row mb-2">
         <div class="col-md-6">
-            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="height: auto">
                 <div class="col p-4 d-flex flex-column position-static">
                     <!-- Yandex.RTB R-A-8796197-1 -->
                     <div id="yandex_rtb_R-A-8796197-1"></div>
@@ -169,7 +169,7 @@
             </div>
         </div>
         <div class="col-md-6">
-            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="height: auto">
                 <div class="col p-4 d-flex flex-column position-static">
                     <!-- Yandex.RTB R-A-8796197-2 -->
                     <div id="yandex_rtb_R-A-8796197-2"></div>
