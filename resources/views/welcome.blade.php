@@ -162,8 +162,18 @@
                     </script>
                 </div>
                 <div class="col-auto d-none d-lg-block" style="width: 50%;">
+                    <!-- Yandex.RTB R-A-8796197-1 -->
+                    <div id="yandex_rtb_R-A-8796197-4"></div>
+                    <script>
+                        window.yaContextCb.push(()=>{
+                            Ya.Context.AdvManager.render({
+                                "blockId": "R-A-8796197-4",
+                                "renderTo": "yandex_rtb_R-A-8796197-4"
+                            })
+                        })
+                    </script>
                     <!-- SAPE RTB DIV ADAPTIVE -->
-                    <div id="SRTB_888041"></div>
+                    {{--<div id="SRTB_888041"></div>--}}
                     <!-- SAPE RTB END -->
                 </div>
             </div>
@@ -183,8 +193,18 @@
                     </script>
                 </div>
                 <div class="col-auto d-none d-lg-block" style="width: 50%;">
+                    <!-- Yandex.RTB R-A-8796197-2 -->
+                    <div id="yandex_rtb_R-A-8796197-5"></div>
+                    <script>
+                        window.yaContextCb.push(()=>{
+                            Ya.Context.AdvManager.render({
+                                "blockId": "R-A-8796197-5",
+                                "renderTo": "yandex_rtb_R-A-8796197-5"
+                            })
+                        })
+                    </script>
                     <!-- SAPE RTB DIV ADAPTIVE -->
-                    <div id="SRTB_888043"></div>
+                    {{--<div id="SRTB_888043"></div>--}}
                     <!-- SAPE RTB END -->
                 </div>
             </div>
