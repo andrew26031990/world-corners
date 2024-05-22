@@ -193,7 +193,7 @@
                     </script>
                 </div>
                 <div class="col-auto d-none d-lg-block" style="width: 50%;">
-                    <!-- Yandex.RTB R-A-8796197-2 -->
+                    <!-- Yandex.RTB R-A-8796197-5 -->
                     <div id="yandex_rtb_R-A-8796197-5"></div>
                     <script>
                         window.yaContextCb.push(()=>{
