@@ -25,7 +25,17 @@
     <div class="position-sticky" style="top: 2rem;">
         <div class="p-4 mb-3 bg-light rounded" style="width: 100%;height: 177px">
             <!-- SAPE RTB DIV ADAPTIVE -->
-            <div id="SRTB_879969"></div>
+            <!-- Yandex.RTB R-A-8796197-3 -->
+            <div id="yandex_rtb_R-A-8796197-3"></div>
+            <script>
+                window.yaContextCb.push(()=>{
+                    Ya.Context.AdvManager.render({
+                        "blockId": "R-A-8796197-3",
+                        "renderTo": "yandex_rtb_R-A-8796197-3"
+                    })
+                })
+            </script>
+            {{--<div id="SRTB_879969"></div>--}}
             <!-- SAPE RTB END -->
         </div>
 

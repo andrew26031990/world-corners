@@ -36,8 +36,9 @@
     <!-- Bootstrap core CSS -->
     <link href="{{asset('blog/bootstrap.min.css')}}" rel="stylesheet">
 
+    <!--RichAds-->
     <script src="https://richinfo.co/richpartners/in-page/js/richads-ob.js?pubid=925717&siteid=346676" async></script>
-
+    <!--RichAds-->
     <style>
         a {
             color: #FFA500
@@ -61,6 +62,11 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="{{asset('blog/blog.css')}}" rel="stylesheet">
+
+    <!-- Yandex.RTB -->
+    <script>window.yaContextCb=window.yaContextCb||[]</script>
+    <script src="https://yandex.ru/ads/system/context.js" async></script>
+    <!-- Yandex.RTB -->
 
     <!-- SAPE RTB JS -->
     <script
@@ -144,52 +150,42 @@
         <div class="col-md-6">
             <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
-                    @php $articleTop1 = getArticles()[0] ?? null @endphp
-                    @if(isset($articleTop1))
-                        <strong class="d-inline-block mb-2 text-primary">World</strong>
-                        <h6 class="mb-0">{{$articleTop1->title}}</h6>
-                        <div
-                            class="mb-1 text-muted">{{\Carbon\Carbon::parse($articleTop1->created_at)->format('M d')}}</div>
-                        <p class="card-text mb-auto">{{\Str::limit($articleTop1->short_text, 81)}}</p>
-                        <a href="{{$articleTop1->slug}}" class="stretched-link">Continue reading</a>
-                    @else
-                        <h1 class="display-4 fst-italic">Title of a longer featured blog post</h1>
-                        <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly
-                            and efficiently about what’s most interesting in this post’s contents.</p>
-                        <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p>
-                    @endif
+                    <!-- Yandex.RTB R-A-8796197-1 -->
+                    <div id="yandex_rtb_R-A-8796197-1"></div>
+                    <script>
+                        window.yaContextCb.push(()=>{
+                            Ya.Context.AdvManager.render({
+                                "blockId": "R-A-8796197-1",
+                                "renderTo": "yandex_rtb_R-A-8796197-1"
+                            })
+                        })
+                    </script>
                 </div>
                 <div class="col-auto d-none d-lg-block" style="width: 50%;">
                     <!-- SAPE RTB DIV ADAPTIVE -->
                     <div id="SRTB_888041"></div>
                     <!-- SAPE RTB END -->
-                    {{--<img src="{{asset('thumbnail.webp')}}" loading="lazy" width="200" height="250" alt="World Corners"/>--}}
                 </div>
             </div>
         </div>
         <div class="col-md-6">
             <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
-                    @php $articleTop2 = getArticles()[1] ?? null @endphp
-                    @if(isset($articleTop2))
-                        <strong class="d-inline-block mb-2 text-primary">World</strong>
-                        <h6 class="mb-0">{{$articleTop2->title}}</h6>
-                        <div
-                            class="mb-1 text-muted">{{\Carbon\Carbon::parse($articleTop2->created_at)->format('M d')}}</div>
-                        <p class="card-text mb-auto">{{\Str::limit($articleTop2->short_text, 91)}}</p>
-                        <a href="{{$articleTop2->slug}}" class="stretched-link">Продолжить чтение</a>
-                    @else
-                        <h1 class="display-4 fst-italic">Title of a longer featured blog post</h1>
-                        <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly
-                            and efficiently about what’s most interesting in this post’s contents.</p>
-                        <p class="lead mb-0"><a href="#" class="text-white fw-bold">Продолжить чтение</a></p>
-                    @endif
+                    <!-- Yandex.RTB R-A-8796197-2 -->
+                    <div id="yandex_rtb_R-A-8796197-2"></div>
+                    <script>
+                        window.yaContextCb.push(()=>{
+                            Ya.Context.AdvManager.render({
+                                "blockId": "R-A-8796197-2",
+                                "renderTo": "yandex_rtb_R-A-8796197-2"
+                            })
+                        })
+                    </script>
                 </div>
                 <div class="col-auto d-none d-lg-block" style="width: 50%;">
                     <!-- SAPE RTB DIV ADAPTIVE -->
                     <div id="SRTB_888043"></div>
                     <!-- SAPE RTB END -->
-                    <img src="" loading="lazy" width="200" height="250" alt="World Corners"/>
                 </div>
             </div>
         </div>
