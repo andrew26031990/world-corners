@@ -161,7 +161,7 @@
                         })
                     </script>
                 </div>
-                <div class="col-auto d-none d-lg-block" style="width: 50%;">
+                <div class="col p-4 d-flex flex-column position-static">
                     <!-- Yandex.RTB R-A-8796197-1 -->
                     <div id="yandex_rtb_R-A-8796197-4"></div>
                     <script>
@@ -192,7 +192,7 @@
                         })
                     </script>
                 </div>
-                <div class="col-auto d-none d-lg-block" style="width: 50%;">
+                <div class="col p-4 d-flex flex-column position-static">
                     <!-- Yandex.RTB R-A-8796197-5 -->
                     <div id="yandex_rtb_R-A-8796197-5"></div>
                     <script>
