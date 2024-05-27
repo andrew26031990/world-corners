@@ -13,9 +13,16 @@
         </article>
         @if($key == 1)
             <div style="width: 100%; height: 100px">
-                <!-- SAPE RTB DIV ADAPTIVE -->
-                <div id="SRTB_879967"></div>
-                <!-- SAPE RTB END -->
+                <!-- Yandex.RTB R-A-8796197-7 -->
+                <div id="yandex_rtb_R-A-8796197-7"></div>
+                <script>
+                    window.yaContextCb.push(()=>{
+                        Ya.Context.AdvManager.render({
+                            "blockId": "R-A-8796197-7",
+                            "renderTo": "yandex_rtb_R-A-8796197-7"
+                        })
+                    })
+                </script>
             </div>
         @endif
         <hr>
@@ -41,9 +48,16 @@
         @include('pages.layouts.articles')
 
         <div class="p-4">
-            <!-- SAPE RTB DIV ADAPTIVE -->
-            <div id="SRTB_879971"></div>
-            <!-- SAPE RTB END -->
+            <!-- Yandex.RTB R-A-8796197-6 -->
+            <div id="yandex_rtb_R-A-8796197-6"></div>
+            <script>
+                window.yaContextCb.push(()=>{
+                    Ya.Context.AdvManager.render({
+                        "blockId": "R-A-8796197-6",
+                        "renderTo": "yandex_rtb_R-A-8796197-6"
+                    })
+                })
+            </script>
         </div>
         <div id="bc_teasers_block_9421" class="bigClickTeasersBlock"></div>
     </div>
