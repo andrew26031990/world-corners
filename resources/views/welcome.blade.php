@@ -222,7 +222,16 @@
     </div>
 
 </main>
-
+<!-- Yandex.RTB R-A-8796197-23 -->
+<script>
+    window.yaContextCb.push(()=>{
+        Ya.Context.AdvManager.render({
+            "blockId": "R-A-8796197-23",
+            "type": "floorAd",
+            "platform": "desktop"
+        })
+    })
+</script>
 <footer class="blog-footer">
     <p>Этот сайт рассказывает об удивительных уголках мира. <a href="/">{{config('app.name')}}</a>.
     </p>
