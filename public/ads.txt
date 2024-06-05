@@ -49,3 +49,4 @@ smartyads.com, 100001, RESELLER, fd2bde0ff2e62c5d
 admixer.co.kr,1538,RESELLER
 google.com, pub-2843405949989126, DIRECT, f08c47fec0942fa0
 rtbsape.com, 1661423, DIRECT
+google.com, pub-7180260897557911, DIRECT, f08c47fec0942fa0
