@@ -1,14 +1,14 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XNX8BJNP34"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LVNQ4DP99F"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'G-XNX8BJNP34');
+        gtag('config', 'G-LVNQ4DP99F');
     </script>
 
     <meta charset="utf-8">
@@ -17,25 +17,29 @@
     <meta name="keywords" content="{{$location->keywords ?? "уголки мира, путешествия, география, культура, достопримечательности, природа, города."}}">
     <meta name="author" content="Andrew Magzumov">
     <meta name="octoclick-verification" content="5398c64971658027e189c4dbb666a6f4">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="{{$location->title ?? config('app.name')}}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="{{asset('thumbnail.webp')}}" />
+    <meta property="og:url" content="{{config('app.url')}}" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:site_name" content="World Corners" />
+    <meta name="Published" content="{{$location->created_at ?? \Carbon\Carbon::now()}}">
+    <meta name="Modified" content="{{$location->updated_at ?? \Carbon\Carbon::now()}}">
 
-    <title>{{config('app.name')}}</title>
+    <title>{{$location->title ?? config('app.name')}}</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/blog/">
     <link rel="icon" type="image/png" href="{{asset('blog/favicon.ico')}}" sizes="32x32">
-
+    <link rel="canonical" href="{{config('app.url')}}" />
 
     <!-- Bootstrap core CSS -->
     <link href="{{asset('blog/bootstrap.min.css')}}" rel="stylesheet">
 
+    <!--RichAds-->
+    <script src="https://richinfo.co/richpartners/in-page/js/richads-ob.js?pubid=925717&siteid=346676" async></script>
+    <!--RichAds-->
     <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-
         a {
             color: #FFA500
         }
@@ -46,9 +50,7 @@
         }
 
         @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
+
         }
     </style>
 
@@ -60,6 +62,11 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="{{asset('blog/blog.css')}}" rel="stylesheet">
+
+    <!-- Yandex.RTB -->
+    <script>window.yaContextCb=window.yaContextCb||[]</script>
+    <script src="https://yandex.ru/ads/system/context.js" async></script>
+    <!-- Yandex.RTB -->
 
     <!-- SAPE RTB JS -->
     <script
@@ -93,7 +100,7 @@
     <header class="blog-header py-3">
         <div class="row flex-nowrap justify-content-between align-items-center">
             <div class="col-4 pt-1">
-                <a class="link-secondary" href="#">Subscribe</a>
+                <a class="link-secondary" href="#">Подписаться</a>
             </div>
             <div class="col-4 text-center">
                 <a class="blog-header-logo text-dark" id="cygroup" href="/">{{config('app.name')}}</a>
@@ -107,7 +114,7 @@
                         <path d="M21 21l-5.2-5.2"/>
                     </svg>
                 </a>
-                <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
+                <a class="btn btn-sm btn-outline-secondary" href="#">Зарегистрироваться</a>
             </div>
         </div>
     </header>
@@ -141,48 +148,64 @@
 
     <div class="row mb-2">
         <div class="col-md-6">
-            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="height: auto">
                 <div class="col p-4 d-flex flex-column position-static">
-                    @php $articleTop1 = getArticles()[0] ?? null @endphp
-                    @if(isset($articleTop1))
-                        <strong class="d-inline-block mb-2 text-primary">World</strong>
-                        <h6 class="mb-0">{{$articleTop1->title}}</h6>
-                        <div
-                            class="mb-1 text-muted">{{\Carbon\Carbon::parse($articleTop1->created_at)->format('M d')}}</div>
-                        <p class="card-text mb-auto">{{\Str::limit($articleTop1->short_text, 81)}}</p>
-                        <a href="{{$articleTop1->slug}}" class="stretched-link">Continue reading</a>
-                    @else
-                        <h1 class="display-4 fst-italic">Title of a longer featured blog post</h1>
-                        <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly
-                            and efficiently about what’s most interesting in this post’s contents.</p>
-                        <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p>
-                    @endif
+                    <!-- Yandex.RTB R-A-8796197-1 -->
+                    <div id="yandex_rtb_R-A-8796197-1"></div>
+                    <script>
+                        window.yaContextCb.push(()=>{
+                            Ya.Context.AdvManager.render({
+                                "blockId": "R-A-8796197-1",
+                                "renderTo": "yandex_rtb_R-A-8796197-1"
+                            })
+                        })
+                    </script>
                 </div>
-                <div class="col-auto d-none d-lg-block">
-                    <img src="{{asset('thumbnail.png')}}"/>
+                <div class="col p-4 d-flex flex-column position-static">
+                    <!-- Yandex.RTB R-A-8796197-1 -->
+                    <div id="yandex_rtb_R-A-8796197-4"></div>
+                    <script>
+                        window.yaContextCb.push(()=>{
+                            Ya.Context.AdvManager.render({
+                                "blockId": "R-A-8796197-4",
+                                "renderTo": "yandex_rtb_R-A-8796197-4"
+                            })
+                        })
+                    </script>
+                    <!-- SAPE RTB DIV ADAPTIVE -->
+                    {{--<div id="SRTB_888041"></div>--}}
+                    <!-- SAPE RTB END -->
                 </div>
             </div>
         </div>
         <div class="col-md-6">
-            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="height: auto">
                 <div class="col p-4 d-flex flex-column position-static">
-                    @php $articleTop2 = getArticles()[1] ?? null @endphp
-                    @if(isset($articleTop2))
-                        <strong class="d-inline-block mb-2 text-primary">World</strong>
-                        <h6 class="mb-0">{{$articleTop2->title}}</h6>
-                        <div
-                            class="mb-1 text-muted">{{\Carbon\Carbon::parse($articleTop2->created_at)->format('M d')}}</div>
-                        <p class="card-text mb-auto">{{\Str::limit($articleTop2->short_text, 91)}}</p>
-                        <a href="{{$articleTop2->slug}}" class="stretched-link">Продолжить чтение</a>
-                    @else
-                        <h1 class="display-4 fst-italic">Title of a longer featured blog post</h1>
-                        <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly
-                            and efficiently about what’s most interesting in this post’s contents.</p>
-                        <p class="lead mb-0"><a href="#" class="text-white fw-bold">Продолжить чтение</a></p>
-                    @endif
+                    <!-- Yandex.RTB R-A-8796197-2 -->
+                    <div id="yandex_rtb_R-A-8796197-2"></div>
+                    <script>
+                        window.yaContextCb.push(()=>{
+                            Ya.Context.AdvManager.render({
+                                "blockId": "R-A-8796197-2",
+                                "renderTo": "yandex_rtb_R-A-8796197-2"
+                            })
+                        })
+                    </script>
                 </div>
-                <div class="col-auto d-none d-lg-block">
-                    <img src="{{asset('thumbnail.png')}}"/>
+                <div class="col p-4 d-flex flex-column position-static">
+                    <!-- Yandex.RTB R-A-8796197-5 -->
+                    <div id="yandex_rtb_R-A-8796197-5"></div>
+                    <script>
+                        window.yaContextCb.push(()=>{
+                            Ya.Context.AdvManager.render({
+                                "blockId": "R-A-8796197-5",
+                                "renderTo": "yandex_rtb_R-A-8796197-5"
+                            })
+                        })
+                    </script>
+                    <!-- SAPE RTB DIV ADAPTIVE -->
+                    {{--<div id="SRTB_888043"></div>--}}
+                    <!-- SAPE RTB END -->
                 </div>
             </div>
         </div>
@@ -199,12 +222,21 @@
     </div>
 
 </main>
-
+<!-- Yandex.RTB R-A-8796197-23 -->
+<script>
+    window.yaContextCb.push(()=>{
+        Ya.Context.AdvManager.render({
+            "blockId": "R-A-8796197-23",
+            "type": "floorAd",
+            "platform": "desktop"
+        })
+    })
+</script>
 <footer class="blog-footer">
-    <p>This blog is about world corners. <a href="/">{{config('app.name')}}</a>.
+    <p>Этот сайт рассказывает об удивительных уголках мира. <a href="/">{{config('app.name')}}</a>.
     </p>
     <p>
-        <a href="#">Back to top</a>
+        <a href="#">Пролистать наверх</a>
     </p>
 </footer>
 <script>

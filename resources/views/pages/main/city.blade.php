@@ -24,9 +24,16 @@
         {!! '<' . $firstHalf !!}
 
         <div style="width: 100%; height: 150px">
-            <!-- SAPE RTB DIV ADAPTIVE -->
-            <div id="SRTB_807894"></div>
-            <!-- SAPE RTB END -->
+            <!-- Yandex.RTB R-A-8796197-14 -->
+            <div id="yandex_rtb_R-A-8796197-14"></div>
+            <script>
+                window.yaContextCb.push(()=>{
+                    Ya.Context.AdvManager.render({
+                        "blockId": "R-A-8796197-14",
+                        "renderTo": "yandex_rtb_R-A-8796197-14"
+                    })
+                })
+            </script>
         </div>
 
         {!! $secondHalf !!}
@@ -38,17 +45,31 @@
 @section('sidebar')
     <div class="position-sticky" style="top: 2rem;">
         <div class="p-4 mb-3 bg-light rounded">
-            <!-- SAPE RTB DIV ADAPTIVE -->
-            <div id="SRTB_807883"></div>
-            <!-- SAPE RTB END -->
+            <!-- Yandex.RTB R-A-8796197-15 -->
+            <div id="yandex_rtb_R-A-8796197-15"></div>
+            <script>
+                window.yaContextCb.push(()=>{
+                    Ya.Context.AdvManager.render({
+                        "blockId": "R-A-8796197-15",
+                        "renderTo": "yandex_rtb_R-A-8796197-15"
+                    })
+                })
+            </script>
         </div>
 
         @include('pages.layouts.articles')
 
         <div class="p-4">
-            <!-- SAPE RTB DIV ADAPTIVE -->
-            <div id="SRTB_807889"></div>
-            <!-- SAPE RTB END -->
+            <!-- Yandex.RTB R-A-8796197-16 -->
+            <div id="yandex_rtb_R-A-8796197-16"></div>
+            <script>
+                window.yaContextCb.push(()=>{
+                    Ya.Context.AdvManager.render({
+                        "blockId": "R-A-8796197-16",
+                        "renderTo": "yandex_rtb_R-A-8796197-16"
+                    })
+                })
+            </script>
         </div>
     </div>
 @endsection

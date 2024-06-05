@@ -1,0 +1,11 @@
+betweendigital.com, 45907, DIRECT
+smartadserver.com, 4467, RESELLER
+vidoomy.com, 9148331, RESELLER
+contextweb.com, 562827, RESELLER, 89ff185a4c4e857c
+pubmatic.com, 159668, RESELLER, 5d62403b186f2ace
+onetag.com, 5d1628750185ace, RESELLER
+xapads.com, 144307, RESELLER
+lunamedia.io, bfacf5e017bb11edb41173b0ca2c748c, RESELLER, 524ecb396915caaf
+adview.com, 53849096, RESELLER, 1b2cc038a11ea319
+e-planning.net, 949b688810cb7439, RESELLER, c1ba615865ed87b2
+google.com, pub-5289985627731322, RESELLER, f08c47fec0942fa0
