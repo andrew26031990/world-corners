@@ -58,8 +58,6 @@
                     })
                 })
             </script>--}}
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7180260897557911"
-                    crossorigin="anonymous"></script>
             <!-- adv_main_sidebar_1 -->
             <ins class="adsbygoogle"
                  style="display:block"

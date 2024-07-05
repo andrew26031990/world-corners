@@ -51,6 +51,8 @@
         }
     </style>
 
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7180260897557911"></script>
+
 
     <!-- Custom styles for this template -->
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
@@ -146,8 +148,6 @@
 <main class="container">
     <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
         <div class="col-md-6 px-0">
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7180260897557911"
-                    crossorigin="anonymous"></script>
             <!-- adv_main_header -->
             <ins class="adsbygoogle"
                  style="display:block"
@@ -189,8 +189,6 @@
                             })
                         })
                     </script>--}}
-                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7180260897557911"
-                            crossorigin="anonymous"></script>
                     <!-- adv_main_square_1 -->
                     <ins class="adsbygoogle"
                          style="display:block"
@@ -213,8 +211,6 @@
                             })
                         })
                     </script>--}}
-                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7180260897557911"
-                            crossorigin="anonymous"></script>
                     <!-- adv_main_square_2 -->
                     <ins class="adsbygoogle"
                          style="display:block"
@@ -241,8 +237,6 @@
                             })
                         })
                     </script>--}}
-                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7180260897557911"
-                            crossorigin="anonymous"></script>
                     <!-- adv_main_square_3 -->
                     <ins class="adsbygoogle"
                          style="display:block"
@@ -265,8 +259,6 @@
                             })
                         })
                     </script>--}}
-                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7180260897557911"
-                            crossorigin="anonymous"></script>
                     <!-- adv_main_square_4 -->
                     <ins class="adsbygoogle"
                          style="display:block"
