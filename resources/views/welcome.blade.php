@@ -153,7 +153,7 @@
             @if(isset($article))
                 <h1 class="display-4 fst-italic">{{$article->title}}</h1>
                 <p class="lead my-3">{{\Str::limit($article->short_text, 100)}}</p>
-                <p class="lead mb-0"><a href="{{$article->slug}}" class="text-white fw-bold">Продолжить чтение...</a>
+                <p class="lead mb-0"><a href="{{$article->slug}}" class="text-white fw-bold">Continue reading...</a>
                 </p>
             @else
                 <h1 class="display-4 fst-italic">Title of a longer featured blog post</h1>
