@@ -2,41 +2,37 @@
 
 @section('content')
     <h3 class="pb-4 mb-4 fst-italic border-bottom">
-        О сайте World Corners
+        About World Corners
     </h3>
 
     <section>
-        <p>Добро пожаловать на страницу "О нас" сайта World Corners – вашего путеводителя <br/>
-            по самым удивительным и уникальным уголкам нашей планеты!</p>
-    </section>
-
-
-    <section>
-        <p>Мы - команда страстных путешественников и исследователей, которые собрались<br/>
-            вместе, чтобы поделиться с вами невероятными приключениями и открытиями,<br/>
-            которые мы сделали в самых отдаленных и красочных местах на земле. Наша<br/>
-            миссия - вдохновлять вас на новые приключения, рассказывать о удивительных<br/>
-            культурах и традициях, а также делиться советами и рекомендациями для<br/>
-            путешествий.</p>
+        <p>Welcome to the "About Us" page of World Corners – your guide to the most amazing and unique corners of our planet!</p>
     </section>
 
     <section>
-        <p>Наши статьи и рассказы охватывают всё: от экзотических тропических островов до<br/>
-            загадочных деревень в горных вершинах, от культурных фестивалей до природных<br/>
-            чудес. Мы стремимся рассказать вам о местах, которые могут изменить ваше<br/>
-            представление о мире.</p>
+        <p>We are a team of passionate travelers and explorers who have come together<br/>
+            to share with you the incredible adventures and discoveries we've made<br/>
+            in the most remote and colorful places on earth. Our mission is to inspire you<br/>
+            to new adventures, tell you about amazing cultures and traditions, and share<br/>
+            travel tips and recommendations.</p>
     </section>
 
     <section>
-        <p>Мы также предлагаем практические советы по путешествиям, советы по выбору<br/>
-            места назначения, информацию о визах и безопасности, а также рекомендации по<br/>
-            размещению и планированию вашей поездки.</p>
+        <p>Our articles and stories cover everything: from exotic tropical islands to<br/>
+            mysterious villages in mountain peaks, from cultural festivals to natural wonders.<br/>
+            We strive to tell you about places that can change your perspective on the world.</p>
     </section>
 
     <section>
-        <p>Присоединяйтесь к нам в увлекательном путешествии по уголкам мира. Вместе мы<br/>
-            будем открывать истории, красоту и богатство этой удивительной планеты.<br/>
-            Спасибо, что выбрали World Corners в качестве вашего путеводителя в мире<br/>
-            путешествий и исследований!</p>
+        <p>We also offer practical travel advice, tips on choosing a destination,<br/>
+            information on visas and safety, as well as recommendations on<br/>
+            accommodation and trip planning.</p>
+    </section>
+
+    <section>
+        <p>Join us on an exciting journey around the corners of the world. Together we<br/>
+            will discover the stories, beauty, and richness of this amazing planet.<br/>
+            Thank you for choosing World Corners as your guide in the world<br/>
+            of travel and exploration!</p>
     </section>
 @endsection

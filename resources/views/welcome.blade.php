@@ -118,7 +118,7 @@
     <header class="blog-header py-3">
         <div class="row flex-nowrap justify-content-between align-items-center">
             <div class="col-4 pt-1">
-                <a class="link-secondary" href="#">Подписаться</a>
+                <a class="link-secondary" href="#">Subscibe</a>
             </div>
             <div class="col-4 text-center">
                 <a class="blog-header-logo text-dark" id="cygroup" href="/">{{config('app.name')}}</a>
@@ -132,7 +132,7 @@
                         <path d="M21 21l-5.2-5.2"/>
                     </svg>
                 </a>
-                <a class="btn btn-sm btn-outline-secondary" href="#">Зарегистрироваться</a>
+                <a class="btn btn-sm btn-outline-secondary" href="#">Registration</a>
             </div>
         </div>
     </header>
@@ -251,10 +251,10 @@
     })
 </script>
 <footer class="blog-footer">
-    <p>Этот сайт рассказывает об удивительных уголках мира. <a href="/">{{config('app.name')}}</a>.
+    <p>This website tells about the amazing corners of the world. <a href="/">{{config('app.name')}}</a>.
     </p>
     <p>
-        <a href="#">Пролистать наверх</a>
+        <a href="#">Back to top</a>
     </p>
 </footer>
 <script>

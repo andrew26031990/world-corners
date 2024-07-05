@@ -2,7 +2,7 @@
 
 @section('content')
     <h3 class="pb-4 mb-4 fst-italic border-bottom">
-        From the Firehose
+        Latest articles
     </h3>
     @foreach($locations as $key => $location)
         <article class="blog-post">
