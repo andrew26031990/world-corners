@@ -49,7 +49,7 @@
 
         <div class="p-4">
             <!-- Yandex.RTB R-A-8796197-6 -->
-            <div id="yandex_rtb_R-A-8796197-6"></div>
+            {{--<div id="yandex_rtb_R-A-8796197-6"></div>
             <script>
                 window.yaContextCb.push(()=>{
                     Ya.Context.AdvManager.render({
@@ -57,6 +57,18 @@
                         "renderTo": "yandex_rtb_R-A-8796197-6"
                     })
                 })
+            </script>--}}
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7180260897557911"
+                    crossorigin="anonymous"></script>
+            <!-- adv_main_sidebar_1 -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-7180260897557911"
+                 data-ad-slot="5843942634"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
         </div>
         <div id="bc_teasers_block_9421" class="bigClickTeasersBlock"></div>

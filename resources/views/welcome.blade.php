@@ -146,6 +146,20 @@
 <main class="container">
     <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
         <div class="col-md-6 px-0">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7180260897557911"
+                    crossorigin="anonymous"></script>
+            <!-- adv_main_header -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-7180260897557911"
+                 data-ad-slot="3399395081"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        <div class="col-md-6 px-0">
             @php $article = getArticles()[0] ?? null; @endphp
             @if(isset($article))
                 <h1 class="display-4 fst-italic">{{$article->title}}</h1>
@@ -166,7 +180,7 @@
             <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="height: auto">
                 <div class="col p-4 d-flex flex-column position-static">
                     <!-- Yandex.RTB R-A-8796197-1 -->
-                    <div id="yandex_rtb_R-A-8796197-1"></div>
+                    {{--<div id="yandex_rtb_R-A-8796197-1"></div>
                     <script>
                         window.yaContextCb.push(()=>{
                             Ya.Context.AdvManager.render({
@@ -174,11 +188,23 @@
                                 "renderTo": "yandex_rtb_R-A-8796197-1"
                             })
                         })
+                    </script>--}}
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7180260897557911"
+                            crossorigin="anonymous"></script>
+                    <!-- adv_main_square_1 -->
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-7180260897557911"
+                         data-ad-slot="1640139591"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
                     </script>
                 </div>
                 <div class="col p-4 d-flex flex-column position-static">
                     <!-- Yandex.RTB R-A-8796197-1 -->
-                    <div id="yandex_rtb_R-A-8796197-4"></div>
+                    {{--<div id="yandex_rtb_R-A-8796197-4"></div>
                     <script>
                         window.yaContextCb.push(()=>{
                             Ya.Context.AdvManager.render({
@@ -186,10 +212,19 @@
                                 "renderTo": "yandex_rtb_R-A-8796197-4"
                             })
                         })
+                    </script>--}}
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7180260897557911"
+                            crossorigin="anonymous"></script>
+                    <!-- adv_main_square_2 -->
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-7180260897557911"
+                         data-ad-slot="4355585231"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
                     </script>
-                    <!-- SAPE RTB DIV ADAPTIVE -->
-                    {{--<div id="SRTB_888041"></div>--}}
-                    <!-- SAPE RTB END -->
                 </div>
             </div>
         </div>
@@ -197,7 +232,7 @@
             <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="height: auto">
                 <div class="col p-4 d-flex flex-column position-static">
                     <!-- Yandex.RTB R-A-8796197-2 -->
-                    <div id="yandex_rtb_R-A-8796197-2"></div>
+                    {{--<div id="yandex_rtb_R-A-8796197-2"></div>
                     <script>
                         window.yaContextCb.push(()=>{
                             Ya.Context.AdvManager.render({
@@ -205,11 +240,23 @@
                                 "renderTo": "yandex_rtb_R-A-8796197-2"
                             })
                         })
+                    </script>--}}
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7180260897557911"
+                            crossorigin="anonymous"></script>
+                    <!-- adv_main_square_3 -->
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-7180260897557911"
+                         data-ad-slot="4572875956"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
                     </script>
                 </div>
                 <div class="col p-4 d-flex flex-column position-static">
                     <!-- Yandex.RTB R-A-8796197-5 -->
-                    <div id="yandex_rtb_R-A-8796197-5"></div>
+                    {{--<div id="yandex_rtb_R-A-8796197-5"></div>
                     <script>
                         window.yaContextCb.push(()=>{
                             Ya.Context.AdvManager.render({
@@ -217,10 +264,19 @@
                                 "renderTo": "yandex_rtb_R-A-8796197-5"
                             })
                         })
+                    </script>--}}
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7180260897557911"
+                            crossorigin="anonymous"></script>
+                    <!-- adv_main_square_4 -->
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-7180260897557911"
+                         data-ad-slot="6418657709"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
                     </script>
-                    <!-- SAPE RTB DIV ADAPTIVE -->
-                    {{--<div id="SRTB_888043"></div>--}}
-                    <!-- SAPE RTB END -->
                 </div>
             </div>
         </div>
