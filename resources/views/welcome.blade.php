@@ -51,7 +51,8 @@
         }
     </style>
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7180260897557911"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7180260897557911"
+            crossorigin="anonymous"></script>
 
 
     <!-- Custom styles for this template -->
