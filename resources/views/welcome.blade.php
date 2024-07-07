@@ -12,6 +12,7 @@
     </script>
 
     <meta charset="utf-8">
+    <meta name="google-adsense-account" content="ca-pub-7180260897557911">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{$location->description ?? "Исследуйте уголки мира, погрузитесь в культуру, природу и достопримечательности разных городов и стран."}}">
     <meta name="keywords" content="{{$location->keywords ?? "уголки мира, путешествия, география, культура, достопримечательности, природа, города."}}">
