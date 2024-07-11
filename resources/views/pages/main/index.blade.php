@@ -58,16 +58,6 @@
                     })
                 })
             </script>--}}
-            <!-- adv_main_sidebar_1 -->
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-7180260897557911"
-                 data-ad-slot="5843942634"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
         </div>
         <div id="bc_teasers_block_9421" class="bigClickTeasersBlock"></div>
     </div>

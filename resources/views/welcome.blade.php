@@ -153,16 +153,7 @@
 <main class="container">
     <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
         <div class="col-md-6 px-0">
-            <!-- adv_main_header -->
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-7180260897557911"
-                 data-ad-slot="3399395081"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+
         </div>
         <div class="col-md-6 px-0">
             @php $article = getArticles()[0] ?? null; @endphp
@@ -194,16 +185,6 @@
                             })
                         })
                     </script>--}}
-                    <!-- adv_main_square_1 -->
-                    <ins class="adsbygoogle"
-                         style="display:block"
-                         data-ad-client="ca-pub-7180260897557911"
-                         data-ad-slot="1640139591"
-                         data-ad-format="auto"
-                         data-full-width-responsive="true"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
                 </div>
                 <div class="col p-4 d-flex flex-column position-static">
                     <!-- Yandex.RTB R-A-8796197-1 -->
@@ -216,16 +197,6 @@
                             })
                         })
                     </script>--}}
-                    <!-- adv_main_square_2 -->
-                    <ins class="adsbygoogle"
-                         style="display:block"
-                         data-ad-client="ca-pub-7180260897557911"
-                         data-ad-slot="4355585231"
-                         data-ad-format="auto"
-                         data-full-width-responsive="true"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
                 </div>
             </div>
         </div>
@@ -242,16 +213,6 @@
                             })
                         })
                     </script>--}}
-                    <!-- adv_main_square_3 -->
-                    <ins class="adsbygoogle"
-                         style="display:block"
-                         data-ad-client="ca-pub-7180260897557911"
-                         data-ad-slot="4572875956"
-                         data-ad-format="auto"
-                         data-full-width-responsive="true"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
                 </div>
                 <div class="col p-4 d-flex flex-column position-static">
                     <!-- Yandex.RTB R-A-8796197-5 -->
@@ -264,16 +225,6 @@
                             })
                         })
                     </script>--}}
-                    <!-- adv_main_square_4 -->
-                    <ins class="adsbygoogle"
-                         style="display:block"
-                         data-ad-client="ca-pub-7180260897557911"
-                         data-ad-slot="6418657709"
-                         data-ad-format="auto"
-                         data-full-width-responsive="true"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
                 </div>
             </div>
         </div>
