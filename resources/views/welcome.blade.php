@@ -12,11 +12,15 @@
     </script>
 
     <meta charset="utf-8">
+    <meta name="google-adsense-account" content="ca-pub-7180260897557911">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{$location->description ?? "Исследуйте уголки мира, погрузитесь в культуру, природу и достопримечательности разных городов и стран."}}">
     <meta name="keywords" content="{{$location->keywords ?? "уголки мира, путешествия, география, культура, достопримечательности, природа, города."}}">
     <meta name="author" content="Andrew Magzumov">
     <meta name="octoclick-verification" content="5398c64971658027e189c4dbb666a6f4">
+
+    <meta name="google-site-verification" content="itnvSOBEoLL2Hhj4sZcy8npTAWf5FtF3mN72pP7Xu-k" />
+
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="{{$location->title ?? config('app.name')}}" />
@@ -53,6 +57,9 @@
 
         }
     </style>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7180260897557911"
+            crossorigin="anonymous"></script>
 
 
     <!-- Custom styles for this template -->
@@ -118,7 +125,7 @@
     <header class="blog-header py-3">
         <div class="row flex-nowrap justify-content-between align-items-center">
             <div class="col-4 pt-1">
-                {{--<a class="link-secondary" href="#">Подписаться</a>--}}
+                <a class="link-secondary" href="#">Подписаться</a>
             </div>
             <div class="col-4 text-center">
                 <a class="blog-header-logo text-dark" id="cygroup" href="/">{{config('app.name')}}</a>
@@ -132,7 +139,7 @@
                         <path d="M21 21l-5.2-5.2"/>
                     </svg>
                 </a>
-                {{--<a class="btn btn-sm btn-outline-secondary" href="#">Зарегистрироваться</a>--}}
+                <a class="btn btn-sm btn-outline-secondary" href="#">Зарегистрироваться</a>
             </div>
         </div>
     </header>
@@ -251,10 +258,10 @@
     })
 </script>
 <footer class="blog-footer">
-    <p>Этот сайт рассказывает об удивительных уголках мира. <a href="/">{{config('app.name')}}</a>.
+    <p>This website tells about the amazing corners of the world. <a href="/">{{config('app.name')}}</a>.
     </p>
     <p>
-        <a href="#">Пролистать наверх</a>
+        <a href="#">Back to top</a>
     </p>
 </footer>
 <script>

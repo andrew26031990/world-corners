@@ -2,7 +2,7 @@
 
 @section('content')
     <h3 class="pb-4 mb-4 fst-italic border-bottom">
-        From the Firehose
+        Latest articles
     </h3>
     @foreach($locations as $key => $location)
         <article class="blog-post">
@@ -49,7 +49,7 @@
 
         <div class="p-4">
             <!-- Yandex.RTB R-A-8796197-6 -->
-            <div id="yandex_rtb_R-A-8796197-6"></div>
+            {{--<div id="yandex_rtb_R-A-8796197-6"></div>
             <script>
                 window.yaContextCb.push(()=>{
                     Ya.Context.AdvManager.render({
@@ -57,7 +57,7 @@
                         "renderTo": "yandex_rtb_R-A-8796197-6"
                     })
                 })
-            </script>
+            </script>--}}
         </div>
         <div id="bc_teasers_block_9421" class="bigClickTeasersBlock"></div>
     </div>
