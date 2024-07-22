@@ -1,4 +1,4 @@
 User-agent: *
-Allow: /public/
+Allow: *
 
 Sitemap: https://world-corners.ru/sitemap.xml
