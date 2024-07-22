@@ -40,9 +40,6 @@
     <!-- Bootstrap core CSS -->
     <link href="{{asset('blog/bootstrap.min.css')}}" rel="stylesheet">
 
-    <!--RichAds-->
-    <script src="https://richinfo.co/richpartners/in-page/js/richads-ob.js?pubid=925717&siteid=346676" async></script>
-    <!--RichAds-->
     <style>
         a {
             color: #FFA500
