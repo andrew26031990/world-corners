@@ -118,7 +118,7 @@
     <header class="blog-header py-3">
         <div class="row flex-nowrap justify-content-between align-items-center">
             <div class="col-4 pt-1">
-                <a class="link-secondary" href="#">Подписаться</a>
+                {{--<a class="link-secondary" href="#">Подписаться</a>--}}
             </div>
             <div class="col-4 text-center">
                 <a class="blog-header-logo text-dark" id="cygroup" href="/">{{config('app.name')}}</a>
@@ -132,7 +132,7 @@
                         <path d="M21 21l-5.2-5.2"/>
                     </svg>
                 </a>
-                <a class="btn btn-sm btn-outline-secondary" href="#">Зарегистрироваться</a>
+                {{--<a class="btn btn-sm btn-outline-secondary" href="#">Зарегистрироваться</a>--}}
             </div>
         </div>
     </header>
@@ -153,7 +153,7 @@
             @if(isset($article))
                 <h1 class="display-4 fst-italic">{{$article->title}}</h1>
                 <p class="lead my-3">{{\Str::limit($article->short_text, 100)}}</p>
-                <p class="lead mb-0"><a href="{{$article->slug}}" class="text-white fw-bold">Продолжить чтение...</a>
+                <p class="lead mb-0"><a href="{{$article->slug}}" class="text-white fw-bold">Continue reading...</a>
                 </p>
             @else
                 <h1 class="display-4 fst-italic">Title of a longer featured blog post</h1>
@@ -165,7 +165,7 @@
     </div>
 
     <div class="row mb-2">
-        <div class="col-md-6">
+        {{--<div class="col-md-6">
             <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="height: auto">
                 <div class="col p-4 d-flex flex-column position-static">
                     <!-- Yandex.RTB R-A-8796197-1 -->
@@ -191,7 +191,7 @@
                         })
                     </script>
                     <!-- SAPE RTB DIV ADAPTIVE -->
-                    {{--<div id="SRTB_888041"></div>--}}
+                    --}}{{--<div id="SRTB_888041"></div>--}}{{--
                     <!-- SAPE RTB END -->
                 </div>
             </div>
@@ -222,11 +222,11 @@
                         })
                     </script>
                     <!-- SAPE RTB DIV ADAPTIVE -->
-                    {{--<div id="SRTB_888043"></div>--}}
+                    --}}{{--<div id="SRTB_888043"></div>--}}{{--
                     <!-- SAPE RTB END -->
                 </div>
             </div>
-        </div>
+        </div>--}}
     </div>
 
     <div class="row g-5">

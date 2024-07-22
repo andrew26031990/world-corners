@@ -11,7 +11,7 @@
 
             {!! $location->short_text !!}
         </article>
-        @if($key == 1)
+        {{--@if($key == 1)
             <div style="width: 100%; height: 100px">
                 <!-- Yandex.RTB R-A-8796197-7 -->
                 <div id="yandex_rtb_R-A-8796197-7"></div>
@@ -24,13 +24,13 @@
                     })
                 </script>
             </div>
-        @endif
+        @endif--}}
         <hr>
     @endforeach
 @endsection
 @section('sidebar')
     <div class="position-sticky" style="top: 2rem;">
-        <div class="p-4 mb-3 bg-light rounded" style="width: 100%;height: 177px">
+        {{--<div class="p-4 mb-3 bg-light rounded" style="width: 100%;height: 177px">
             <!-- Yandex.RTB R-A-8796197-3 -->
             <div id="yandex_rtb_R-A-8796197-3"></div>
             <script>
@@ -41,9 +41,9 @@
                     })
                 })
             </script>
-            {{--<div id="SRTB_879969"></div>--}}
+            --}}{{--<div id="SRTB_879969"></div>--}}{{--
             <!-- SAPE RTB END -->
-        </div>
+        </div>--}}
 
         @include('pages.layouts.articles')
 

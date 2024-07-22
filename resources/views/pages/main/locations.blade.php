@@ -10,7 +10,7 @@
             <p class="blog-post-meta">{{\Carbon\Carbon::parse($location->created_at)->format('F j, Y')}}</p>
             {!! $location->short_text !!}
         </article>
-        @if($key == 1)
+        {{--@if($key == 1)
             <div style="width: 100%; height: 100px">
                 <!-- Yandex.RTB R-A-8796197-8 -->
                 <div id="yandex_rtb_R-A-8796197-8"></div>
@@ -23,7 +23,7 @@
                     })
                 </script>
             </div>
-        @endif
+        @endif--}}
         <hr>
     @endforeach
 
@@ -32,7 +32,7 @@
 @endsection
 @section('sidebar')
     <div class="position-sticky" style="top: 2rem;">
-        <div class="p-4 mb-3 bg-light rounded">
+        {{--<div class="p-4 mb-3 bg-light rounded">
             <!-- Yandex.RTB R-A-8796197-9 -->
             <div id="yandex_rtb_R-A-8796197-9"></div>
             <script>
@@ -43,7 +43,7 @@
                     })
                 })
             </script>
-        </div>
+        </div>--}}
 
         @include('pages.layouts.articles')
 

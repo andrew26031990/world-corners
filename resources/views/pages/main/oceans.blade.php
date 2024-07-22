@@ -44,7 +44,7 @@
 @endsection
 @section('sidebar')
     <div class="position-sticky" style="top: 2rem;">
-        <div class="p-4 mb-3 bg-light rounded">
+        {{--<div class="p-4 mb-3 bg-light rounded">
             <!-- Yandex.RTB R-A-8796197-18 -->
             <div id="yandex_rtb_R-A-8796197-18"></div>
             <script>
@@ -55,7 +55,7 @@
                     })
                 })
             </script>
-        </div>
+        </div>--}}
 
         @include('pages.layouts.articles')
 
