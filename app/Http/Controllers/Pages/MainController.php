@@ -32,6 +32,11 @@ class MainController extends Controller
 
     public function contacts()
     {
+        return view('pages.main.contacts');
+    }
 
+    public function privacyAndPolicy()
+    {
+        return view('pages.main.privacy-policy');
     }
 }
