@@ -32,7 +32,13 @@
     <meta name="Published" content="{{$location->created_at ?? \Carbon\Carbon::now()}}">
     <meta name="Modified" content="{{$location->updated_at ?? \Carbon\Carbon::now()}}">
 
-    <title>{{$menu->name ? $location->title : config('app.name')}}</title>
+    <title>@if(isset($menu->name))
+            {{$menu->name}}
+        @elseif(isset($location->title))
+            {{$location->title}}
+        @else
+            {{config('app.name')}}
+        @endif</title>
 
     <link rel="icon" type="image/png" href="{{asset('blog/favicon.ico')}}" sizes="32x32">
     <link rel="canonical" href="{{config('app.url')}}" />
