@@ -185,4 +185,5 @@ return [
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 
+    'undetectable_ai' => env('UNDETECTABLE_AI_TOKEN', '')
 ];
