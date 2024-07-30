@@ -7,6 +7,7 @@
                 <th>Локация</th>
                 <th>Slug</th>
                 <th>Дата обновления</th>
+                <th>Статус</th>
                 <th colspan="3">Action</th>
             </tr>
             </thead>
@@ -17,6 +18,7 @@
                     <td><a href="{{ $location->slug }}" target="_blank">{{ $location->title }}</a></td>
                     <td>{{ $location->slug }}</td>
                     <td>{{ $location->updated_at }}</td>
+                    <td>{{ (\Carbon\Carbon::parse($location->updated_at)->format('Y-m-d') < \Carbon\Carbon::now()->format('Y-m-d')) ? 'Old' : 'New' }}</td>
                     <td  style="width: 120px">
                         {!! Form::open(['route' => ['locations.destroy', $location->id], 'method' => 'delete']) !!}
                         <div class='btn-group'>
