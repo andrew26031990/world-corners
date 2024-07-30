@@ -20,9 +20,9 @@
                     <td>{{ $location->updated_at }}</td>
                     <td>
                         @if(\Carbon\Carbon::parse($location->updated_at)->format('Y-m-d') < \Carbon\Carbon::now()->format('Y-m-d'))
-                            <button type="button" class="btn btn-warning">Old</button>
+                            <span class="badge badge-warning">Old</span>
                         @else
-                            <button type="button" class="btn btn-success">New</button>
+                            <span class="badge badge-success">New</span>
                         @endif
                     </td>
                     <td  style="width: 120px">
