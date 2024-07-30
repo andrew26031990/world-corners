@@ -6,8 +6,7 @@
                 <th>Категория</th>
                 <th>Локация</th>
                 <th>Slug</th>
-                <th>Широта</th>
-                <th>Долгота</th>
+                <th>Дата обновления</th>
                 <th colspan="3">Action</th>
             </tr>
             </thead>
@@ -17,8 +16,7 @@
                     <td>{{ $allMenu[$location->menu_id] ?? '' }}</td>
                     <td><a href="{{ $location->slug }}" target="_blank">{{ $location->title }}</a></td>
                     <td>{{ $location->slug }}</td>
-                    <td>{{ $location->latitude }}</td>
-                    <td>{{ $location->longitude }}</td>
+                    <td>{{ $location->updated_at }}</td>
                     <td  style="width: 120px">
                         {!! Form::open(['route' => ['locations.destroy', $location->id], 'method' => 'delete']) !!}
                         <div class='btn-group'>
