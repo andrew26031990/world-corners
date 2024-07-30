@@ -18,7 +18,13 @@
                     <td><a href="{{ $location->slug }}" target="_blank">{{ $location->title }}</a></td>
                     <td>{{ $location->slug }}</td>
                     <td>{{ $location->updated_at }}</td>
-                    <td>{{ (\Carbon\Carbon::parse($location->updated_at)->format('Y-m-d') < \Carbon\Carbon::now()->format('Y-m-d')) ? 'Old' : 'New' }}</td>
+                    <td>
+                        @if(\Carbon\Carbon::parse($location->updated_at)->format('Y-m-d') < \Carbon\Carbon::now()->format('Y-m-d'))
+                            <button type="button" class="btn btn-warning">Old</button>
+                        @else
+                            <button type="button" class="btn btn-success">New</button>
+                        @endif
+                    </td>
                     <td  style="width: 120px">
                         {!! Form::open(['route' => ['locations.destroy', $location->id], 'method' => 'delete']) !!}
                         <div class='btn-group'>
