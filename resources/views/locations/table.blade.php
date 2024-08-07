@@ -25,7 +25,7 @@
                             <span class="badge badge-success">New</span>
                         @endif--}}
 
-                        @if(\Carbon\Carbon::parse($location->updated_at)->addWeeks(2)->isPast())
+                        @if(\Carbon\Carbon::parse($location->updated_at)->addWeeks(1)->isPast())
                             <span class="badge badge-warning">Old</span>
                         @else
                             <span class="badge badge-success">New</span>
