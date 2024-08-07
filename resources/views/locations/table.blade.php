@@ -19,7 +19,13 @@
                     <td>{{ $location->slug }}</td>
                     <td>{{ $location->updated_at }}</td>
                     <td>
-                        @if(\Carbon\Carbon::parse($location->updated_at)->format('Y-m-d') < \Carbon\Carbon::now()->format('Y-m-d'))
+                        {{--@if(\Carbon\Carbon::parse($location->updated_at)->format('Y-m-d') < \Carbon\Carbon::now()->format('Y-m-d'))
+                            <span class="badge badge-warning">Old</span>
+                        @else
+                            <span class="badge badge-success">New</span>
+                        @endif--}}
+
+                        @if(\Carbon\Carbon::parse($location->updated_at)->addWeeks(2)->isPast())
                             <span class="badge badge-warning">Old</span>
                         @else
                             <span class="badge badge-success">New</span>
