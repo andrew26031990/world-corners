@@ -394,7 +394,7 @@
         images.forEach((img, index) => {
             if(img.width > 636 || img.height > 358){
                 img.style.width = '50%';
-                img.style.height = '50%';
+                img.style.height = 'auto';
             }
 
             if (index % 2 === 0) {
