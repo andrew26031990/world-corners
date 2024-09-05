@@ -169,7 +169,7 @@
                         <path d="M21 21l-5.2-5.2"/>
                     </svg>
                 </a>
-                <div id="clearfix" style="position: absolute; top: 50px;right: 11px; overflow-y: scroll; width: 428px;border: 1px solid #e5e5e5; background-color: white;z-index: 1111111111111111;height: 134px;">
+                <div id="clearfix" style="position: absolute; top: 50px;right: 11px; overflow-y: scroll; width: 428px;border: 1px solid #e5e5e5; background-color: white;z-index: 1111111111111111;max-height: 134px; height: auto">
 
                 </div>
             </div>
