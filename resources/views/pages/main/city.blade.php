@@ -23,7 +23,7 @@
 
         {!! '<' . $firstHalf !!}
 
-        <div style="width: 100%; height: 150px">
+        {{--<div style="width: 100%; height: 150px">
             <!-- Yandex.RTB R-A-8796197-14 -->
             <div id="yandex_rtb_R-A-8796197-14"></div>
             <script>
@@ -34,7 +34,7 @@
                     })
                 })
             </script>
-        </div>
+        </div>--}}
 
         {!! $secondHalf !!}
 
