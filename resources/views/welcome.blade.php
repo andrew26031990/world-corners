@@ -402,7 +402,7 @@
                 img.style.marginRight = '15px';
             } else {
                 img.style.float = 'right';
-                img.style.marginRight = '15px';
+                img.style.marginLeft = '15px';
             }
         });
     }
