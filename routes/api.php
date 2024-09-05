@@ -2,6 +2,7 @@
 
 use App\Models\Location;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
@@ -33,5 +34,13 @@ Route::get('random-title', function (){
     return response()->json([
         'title' => $location->title,
         'cutted-title' => explode(":", $location->title)[0]
+    ]);
+});
+
+Route::get('/search-locations/{search}', function ($search){
+    $locations = DB::table('locations')->where('title', 'like', "%".$search."%" ?? '')->orWhere('text', 'like', '%' . $search . '%')->get(['title', 'slug']);
+
+    return response()->json([
+        'locations' => $locations
     ]);
 });

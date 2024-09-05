@@ -59,6 +59,28 @@
         @media (min-width: 768px) {
 
         }
+
+        .search-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .search-input {
+            display: none;
+            width: 200px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            position: absolute;
+            top: 50%;
+            left: 25px;
+            transform: translateY(-50%);
+        }
+
+        .search-input.active {
+            display: inline-block;
+        }
+
     </style>
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7180260897557911"
@@ -133,8 +155,9 @@
             <div class="col-4 text-center">
                 <a class="blog-header-logo text-dark" id="cygroup" href="/">{{config('app.name')}}</a>
             </div>
-            <div class="col-4 d-flex justify-content-end align-items-center">
-                <a class="link-secondary" href="#" aria-label="Search">
+            <div class="col-4 d-flex justify-content-end align-items-center" id="search" style="position: relative">
+                <input type="text" style="width: 80px; position: relative; top: 16px; left: 6px;" id="search-input" class="search-input" placeholder="Search..." />
+                <a class="link-secondary" href="#" aria-label="Search" id="search-button">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
                          stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img"
                          viewBox="0 0 24 24"><title>Search</title>
@@ -142,7 +165,9 @@
                         <path d="M21 21l-5.2-5.2"/>
                     </svg>
                 </a>
-                {{--<a class="btn btn-sm btn-outline-secondary" href="#">Зарегистрироваться</a>--}}
+                <div id="clearfix" style="position: absolute; top: 50px;right: 11px; overflow-y: scroll; width: 428px;border: 1px solid #e5e5e5; background-color: white;z-index: 1111111111111111;height: 134px;">
+
+                </div>
             </div>
         </div>
     </header>
@@ -292,6 +317,72 @@
             }
         }
     }
+
+    document.getElementById('clearfix').style.display = 'none';
+
+    document.getElementById('search-button').addEventListener('click', function(event) {
+        event.preventDefault();
+        var searchInput = document.getElementById('search-input');
+        searchInput.classList.toggle('active');
+        if (searchInput.classList.contains('active')) {
+            searchInput.focus();
+        }
+        clearResults();
+    });
+
+    let timeout;
+    document.getElementById('search-input').addEventListener('keydown', function(event) {
+        clearTimeout(timeout);
+        clearResults();
+
+        if(event.target.value.length > 1){
+            timeout = setTimeout(function() {
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', "/api/search-locations/" + encodeURIComponent(event.target.value), true);
+                xhr.onload = function() {
+                    if (xhr.status >= 200 && xhr.status < 400) {
+                        var data = JSON.parse(xhr.responseText);
+                        document.getElementById('clearfix').style.display = 'block';
+                        var searchResultsContainer = document.getElementById('clearfix');
+
+                        for (let i = 0; i < data['locations'].length; i++) {
+                            console.log(data['locations'][i].slug);
+                            var a = document.createElement('a');
+                            a.textContent = data['locations'][i].slug;
+                            a.classList.add('dynamic-div');
+                            a.style.top = '54px';
+                            a.style.right = '355px';
+                            a.style.zIndex = 1111111111111111;
+                            a.style.float = 'left';
+                            a.style.margin = '10px 10px 10px 10px';
+                            a.style.backgroundColor = 'white';
+                            a.style.border = '1px solid #e5e5e5';
+                            a.href = data['locations'][i].slug
+                            a.innerHTML = data['locations'][i].title
+                            searchResultsContainer.appendChild(a);
+                        }
+                    } else {
+                        console.error('Request failed with status:', xhr.status);
+                    }
+                };
+
+                xhr.onerror = function() {
+                    console.error('Network request failed');
+                };
+
+                xhr.send();
+            }, 300);
+        }
+    });
+
+    function clearResults() {
+        let elements = document.querySelectorAll('.dynamic-div');
+        elements.forEach(function(element) {
+            element.remove();
+        });
+        document.getElementById('clearfix').style.display = 'none';
+    }
+
 </script>
 </body>
 </html>
