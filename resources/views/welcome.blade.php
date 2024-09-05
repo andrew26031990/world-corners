@@ -81,6 +81,10 @@
             display: inline-block;
         }
 
+        img {
+            max-width: 300px;
+            margin-bottom: 15px; /* Чтобы картинки не слипались */
+        }
     </style>
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7180260897557911"
@@ -318,6 +322,7 @@
         }
     }
 
+    obtekanieTeksta();
     document.getElementById('clearfix').style.display = 'none';
 
     document.getElementById('search-button').addEventListener('click', function(event) {
@@ -383,6 +388,24 @@
         document.getElementById('clearfix').style.display = 'none';
     }
 
+    function obtekanieTeksta(){
+        const images = document.querySelectorAll('img');
+
+        images.forEach((img, index) => {
+            if(img.width > 636 || img.height > 358){
+                img.style.width = '50%';
+                img.style.height = '50%';
+            }
+
+            if (index % 2 === 0) {
+                img.style.float = 'left';
+                img.style.marginRight = '15px';
+            } else {
+                img.style.float = 'right';
+                img.style.marginRight = '15px';
+            }
+        });
+    }
 </script>
 </body>
 </html>

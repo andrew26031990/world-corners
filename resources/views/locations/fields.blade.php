@@ -87,7 +87,7 @@
 </script>
 <script>
     ClassicEditor
-        .create( document.querySelector( '#text' ) )
+        .create( document.querySelector( '#text' ))
         .then( editor => {
             console.log( editor );
         } )
