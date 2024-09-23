@@ -10,10 +10,12 @@ use App\Models\Menu;
 use App\Repositories\LocationRepository;
 use Illuminate\Http\Request;
 use Flash;
+use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Laravel\Facades\Image;
 
 class LocationController extends AppBaseController
 {
-    /** @var LocationRepository $locationRepository*/
+    /** @var LocationRepository $locationRepository */
     private $locationRepository;
 
     public function __construct(LocationRepository $locationRepo)
@@ -103,6 +105,22 @@ class LocationController extends AppBaseController
         }
 
         $location = $this->locationRepository->update($request->all(), $id);
+
+        if ($request->hasFile('img')) {
+            if ($location->img) {
+                Storage::delete($location->img);
+            }
+
+            $filePath = $request->file('img');//->store('images', 'public');
+            $imagePath = 'images/' . uniqid() . '.' . $filePath->getClientOriginalExtension();
+
+            Image::read($filePath)
+                ->resize(750, 350)
+                ->save(storage_path('app/public/' . $imagePath));
+
+            $location->img = $imagePath;
+            $location->save();
+        }
 
         Flash::success('Location updated successfully.');
 

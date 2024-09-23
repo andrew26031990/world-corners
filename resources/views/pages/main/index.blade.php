@@ -60,7 +60,7 @@
                     <div class="blog_left_sidebar">
                         @foreach($locations as $key => $location)
                             <article class="row blog_item">
-                                <div class="col-md-3">
+                                {{--<div class="col-md-3">
                                     <div class="blog_info text-right">
                                         <div class="post_tag">
                                             <a href="#">Food,</a>
@@ -75,8 +75,8 @@
                                             <li><a href="#">06 Comments<i class="lnr lnr-bubble"></i></a></li>
                                         </ul>
                                     </div>
-                                </div>
-                                <div class="col-md-9">
+                                </div>--}}
+                                <div class="col-md-12">
                                     <div class="blog_post">
                                         <img src="img/blog/main-blog/m-blog-1.jpg" alt="">
                                         <div class="blog_details">
@@ -93,149 +93,63 @@
                         @endforeach
                         <nav class="blog-pagination justify-content-center d-flex">
                             <ul class="pagination">
-                                <li class="page-item">
-                                    <a href="#" class="page-link" aria-label="Previous">
+                                @if ($locations->onFirstPage())
+                                    <li class="page-item disabled">
+                                        <a href="#" class="page-link" aria-label="Previous">
                                         <span aria-hidden="true">
                                             <span class="lnr lnr-chevron-left"></span>
                                         </span>
-                                    </a>
-                                </li>
-                                <li class="page-item"><a href="#" class="page-link">01</a></li>
-                                <li class="page-item active"><a href="#" class="page-link">02</a></li>
-                                <li class="page-item"><a href="#" class="page-link">03</a></li>
-                                <li class="page-item"><a href="#" class="page-link">04</a></li>
-                                <li class="page-item"><a href="#" class="page-link">09</a></li>
-                                <li class="page-item">
-                                    <a href="#" class="page-link" aria-label="Next">
+                                        </a>
+                                    </li>
+                                @else
+                                    <li class="page-item">
+                                        <a href="{{ $locations->previousPageUrl() }}" class="page-link"
+                                           aria-label="Previous">
                                         <span aria-hidden="true">
-                                            <span class="lnr lnr-chevron-right"></span>
+                                            <span class="lnr lnr-chevron-left"></span>
                                         </span>
-                                    </a>
-                                </li>
+                                        </a>
+                                    </li>
+                                @endif
+
+                                @foreach (range(1, $locations->lastPage()) as $i)
+                                    @if ($i >= $locations->currentPage() - 2 && $i <= $locations->currentPage() + 2)
+                                        @if ($i == $locations->currentPage())
+                                            <li class="page-item active"><a href="#" class="page-link">{{ $i }}</a></li>
+                                        @else
+                                            <li class="page-item"><a href="{{ $locations->url($i) }}"
+                                                                     class="page-link">{{ $i }}</a></li>
+                                        @endif
+                                    @endif
+                                @endforeach
+
+                                @if ($locations->hasMorePages())
+                                    <li class="page-item">
+                                        <a href="{{$locations->nextPageUrl()}}" class="page-link" aria-label="Next">
+                                    <span aria-hidden="true">
+                                        <span class="lnr lnr-chevron-right"></span>
+                                    </span>
+                                        </a>
+                                    </li>
+                                @else
+                                    <li class="page-item">
+                                        <a href="#" class="page-link disabled" aria-label="Next">
+                                    <span aria-hidden="true">
+                                        <span class="lnr lnr-chevron-right"></span>
+                                    </span>
+                                        </a>
+                                    </li>
+                                @endif
+
                             </ul>
                         </nav>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="blog_right_sidebar">
-                        <aside class="single_sidebar_widget search_widget">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search Posts">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button"><i class="lnr lnr-magnifier"></i></button>
-                                </span>
-                            </div><!-- /input-group -->
-                            <div class="br"></div>
-                        </aside>
-                        <aside class="single_sidebar_widget popular_post_widget">
-                            <h3 class="widget_title">Popular Posts</h3>
-                            <div class="media post_item">
-                                <img src="img/blog/popular-post/post1.jpg" alt="post">
-                                <div class="media-body">
-                                    <a href="blog-details.html">
-                                        <h3>Space The Final Frontier</h3>
-                                    </a>
-                                    <p>02 Hours ago</p>
-                                </div>
-                            </div>
-                            <div class="media post_item">
-                                <img src="img/blog/popular-post/post2.jpg" alt="post">
-                                <div class="media-body">
-                                    <a href="blog-details.html">
-                                        <h3>The Amazing Hubble</h3>
-                                    </a>
-                                    <p>02 Hours ago</p>
-                                </div>
-                            </div>
-                            <div class="media post_item">
-                                <img src="img/blog/popular-post/post3.jpg" alt="post">
-                                <div class="media-body">
-                                    <a href="blog-details.html">
-                                        <h3>Astronomy Or Astrology</h3>
-                                    </a>
-                                    <p>03 Hours ago</p>
-                                </div>
-                            </div>
-                            <div class="media post_item">
-                                <img src="img/blog/popular-post/post4.jpg" alt="post">
-                                <div class="media-body">
-                                    <a href="blog-details.html">
-                                        <h3>Asteroids telescope</h3>
-                                    </a>
-                                    <p>01 Hours ago</p>
-                                </div>
-                            </div>
-                            <div class="br"></div>
-                        </aside>
+                        @include('pages.layouts.articles')
                         <aside class="single_sidebar_widget ads_widget">
-                            <a href="#"><img class="img-fluid" src="img/blog/add.jpg" alt=""></a>
-                            <div class="br"></div>
-                        </aside>
-                        <aside class="single_sidebar_widget post_category_widget">
-                            <h4 class="widget_title">Post Catgories</h4>
-                            <ul class="list cat-list">
-                                <li>
-                                    <a href="#" class="d-flex justify-content-between">
-                                        <p>Technology</p>
-                                        <p>37</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="d-flex justify-content-between">
-                                        <p>Lifestyle</p>
-                                        <p>24</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="d-flex justify-content-between">
-                                        <p>Fashion</p>
-                                        <p>59</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="d-flex justify-content-between">
-                                        <p>Art</p>
-                                        <p>29</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="d-flex justify-content-between">
-                                        <p>Food</p>
-                                        <p>15</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="d-flex justify-content-between">
-                                        <p>Architecture</p>
-                                        <p>09</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="d-flex justify-content-between">
-                                        <p>Adventure</p>
-                                        <p>44</p>
-                                    </a>
-                                </li>
-                            </ul>
-                            <div class="br"></div>
-                        </aside>
-                        <aside class="single-sidebar-widget newsletter_widget">
-                            <h4 class="widget_title">Newsletter</h4>
-                            <p>
-                                Here, I focus on a range of items and features that we use in life without
-                                giving them a second thought.
-                            </p>
-                            <div class="form-group d-flex flex-row">
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text"><i class="fa fa-envelope" aria-hidden="true"></i></div>
-                                    </div>
-                                    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Enter email"
-                                           onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email'">
-                                </div>
-                                <a href="#" class="bbtns">Subcribe</a>
-                            </div>
-                            <p class="text-bottom">You can unsubscribe at any time</p>
+                            <a href="#"><img class="img-fluid" src="{{url('img/blog/add.jpg')}}" alt=""></a>
                             <div class="br"></div>
                         </aside>
                     </div>
@@ -248,6 +162,5 @@
 @section('sidebar')
     <div class="position-sticky" style="top: 2rem;">
         @include('pages.layouts.articles')
-        <div id="bc_teasers_block_9421" class="bigClickTeasersBlock"></div>
     </div>
 @endsection

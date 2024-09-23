@@ -35,6 +35,11 @@ class Menu extends Model
         return $this->hasMany(\App\Models\Location::class, 'menu_id');
     }
 
+    public function children(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(Menu::class, 'parent_id');
+    }
+
     public static function getDataForSelect($is_index = false): array
     {
         $data = self::all();

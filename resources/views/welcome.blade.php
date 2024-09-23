@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="{{asset('img/favicon.png')}}" type="image/png">
-    <title>World Corners</title>
+    <title>Amazing places</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
     <link rel="stylesheet" href="{{asset('vendors/linericon/style.css')}}">
@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="{{asset('vendors/nice-select/css/nice-select.css')}}">
     <!-- main css -->
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
+
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <script src="{{ mix('js/app.js') }}" defer></script>
 </head>
 
 <body>
@@ -26,7 +29,7 @@
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
-                <a class="navbar-brand logo_h" href="/"><img src="{{asset('img/logo.png')}}" alt=""></a>
+                <a class="navbar-brand logo_h" href="/"><img src="{{asset('img/logo.webp')}}" style="width: 94px" alt=""></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="icon-bar"></span>
@@ -36,26 +39,21 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                     <ul class="nav navbar-nav menu_nav ml-auto">
-                        <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="packages.html">Packages</a></li>
-                        <li class="nav-item submenu dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                               aria-expanded="false">Pages</a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item"><a class="nav-link" href="about-us.html">About</a></li>
-                                <li class="nav-item"><a class="nav-link" href="book-trip.html">Book trip</a></li>
-                                <li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item submenu dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                               aria-expanded="false">Blog</a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                                <li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        @foreach(getMenu() as $item)
+                            @if($item->children->isNotEmpty())
+                                <li class="nav-item submenu dropdown">
+                                    <a href="{{$item->slug}}" id="{{$item->id}}MegaMenu" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                       aria-expanded="false">{{$item->name}}</a>
+                                    <ul class="dropdown-menu">
+                                        @foreach($item->children as $child)
+                                            <li class="nav-item"><a class="nav-link" id="{{$child->id}}MegaMenu" href="{{$child->slug}}">{{$child->name}}</a></li>
+                                        @endforeach
+                                    </ul>
+                                </li>
+                            @else
+                                <li class="nav-item"><a class="nav-link" id="{{$item->id}}MegaMenu" href="{{$item->slug}}">{{$item->name}}</a></li>
+                            @endif
+                        @endforeach
                     </ul>
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item">
@@ -91,121 +89,13 @@
             <div class="row fullscreen d-flex align-items-center justify-content-center">
                 <div class="banner_content">
                     <p>Plan a trip to everywhere with</p>
-                    <h2>World Corners</h2>
+                    <h2>Amazing Places</h2>
                 </div>
             </div>
         </div>
     </div>
 </section>
 <!--================ End Home Banner Area =================-->
-
-<!--================ Start Feature Area =================-->
-<section class="feature-area section_gap_top">
-    <div class="container">
-        <div class="row align-items-end justify-content-left">
-            <div class="col-lg-12">
-                <div class="main_title">
-                    <p>We’re Offering these Popular places</p>
-                    <h1>Getting Adventure with us</h1>
-                    <span class="title-widget-bg"></span>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <!-- single-feature -->
-            <div class="col-lg-4 col-md-6">
-                <div class="single-feature">
-                    @php $article = getArticles()[0] ?? null; @endphp
-                    @if(isset($article))
-                        <div class="feature-details">
-                            <h5>{{\Str::limit($article->title, 37)}}</h5>
-                            <p>
-                                {{\Str::limit($article->short_text, 70)}}
-                            </p>
-                            <a href="{{$article->slug}}" class="primary-btn mb-40">Read More</a>
-                        </div>
-                        <div class="feature-thumb">
-                            <img class="img-fluid" src="{{asset('img/service/s1.png')}}" alt="">
-                        </div>
-                    @else
-                    <div class="feature-details">
-                        <h5>Relaxation in the <br>
-                            Local Beach Campfire</h5>
-                        <p>
-                            Lorem ipsum dolor sit amet, consecter adipisicing elit, sed do eiusmod tempor incididunt.
-                        </p>
-                        <a href="#" class="primary-btn mb-40">Read More</a>
-                    </div>
-                    <div class="feature-thumb">
-                        <img class="img-fluid" src="{{asset('img/service/s2.png')}}" alt="">
-                    </div>
-                    @endif
-                </div>
-            </div>
-            <!-- single-feature -->
-            <div class="col-lg-4 col-md-6">
-                <div class="single-feature">
-                    @php $article = getArticles()[1] ?? null; @endphp
-                    @if(isset($article))
-                        <div class="feature-details">
-                            <h5>{{\Str::limit($article->title, 37)}}</h5>
-                            <p>
-                                {{\Str::limit($article->short_text, 70)}}
-                            </p>
-                            <a href="{{$article->slug}}" class="primary-btn mb-40">Read More</a>
-                        </div>
-                        <div class="feature-thumb">
-                            <img class="img-fluid" src="{{asset('img/service/s2.png')}}" alt="">
-                        </div>
-                    @else
-                        <div class="feature-details">
-                            <h5>Relaxation in the <br>
-                                Local Beach Campfire</h5>
-                            <p>
-                                Lorem ipsum dolor sit amet, consecter adipisicing elit, sed do eiusmod tempor incididunt.
-                            </p>
-                            <a href="#" class="primary-btn mb-40">Read More</a>
-                        </div>
-                        <div class="feature-thumb">
-                            <img class="img-fluid" src="{{asset('img/service/s2.png')}}" alt="">
-                        </div>
-                    @endif
-                </div>
-            </div>
-            <!-- single-feature -->
-            <div class="col-lg-4 col-md-6">
-                <div class="single-feature">
-                    @php $article = getArticles()[2] ?? null; @endphp
-                    @if(isset($article))
-                        <div class="feature-details">
-                            <h5>{{\Str::limit($article->title, 37)}}</h5>
-                            <p>
-                                {{\Str::limit($article->short_text, 70)}}
-                            </p>
-                            <a href="{{$article->slug}}" class="primary-btn mb-40">Read More</a>
-                        </div>
-                        <div class="feature-thumb">
-                            <img class="img-fluid" src="{{asset('img/service/s3.png')}}" alt="">
-                        </div>
-                    @else
-                        <div class="feature-details">
-                            <h5>Relaxation in the <br>
-                                Local Beach Campfire</h5>
-                            <p>
-                                Lorem ipsum dolor sit amet, consecter adipisicing elit, sed do eiusmod tempor incididunt.
-                            </p>
-                            <a href="#" class="primary-btn mb-40">Read More</a>
-                        </div>
-                        <div class="feature-thumb">
-                            <img class="img-fluid" src="{{asset('img/service/s3.png')}}" alt="">
-                        </div>
-                    @endif
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--================ End Feature Area =================-->
 
 @yield('content')
 

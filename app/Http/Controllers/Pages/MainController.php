@@ -13,7 +13,7 @@ class MainController extends Controller
      */
     public function index()
     {
-        $locations = Location::orderByDesc('created_at')->limit(3)->get();
+        $locations = Location::query()->orderByDesc('created_at')->paginate(3);
         return view('pages.main.index', compact('locations'));
     }
 
