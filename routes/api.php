@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Pages\CommentController;
 use App\Models\Location;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
@@ -44,3 +45,5 @@ Route::get('/search-locations/{search}', function ($search){
         'locations' => $locations
     ]);
 });
+
+Route::post('/save-comment', [CommentController::class, 'store']);

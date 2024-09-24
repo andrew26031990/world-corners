@@ -27,19 +27,21 @@ class LocationController extends Controller
         $locationSlug = '/'.$slug.'/'.$location;
         $location = Location::whereSlug($locationSlug)->firstOrFail();
 
+        $comments = $location->comments;
+
         if(Str::contains($locationSlug, 'cities')){
-            return view('pages.main.city', compact('location'));
+            return view('pages.main.city', compact('location', 'comments'));
         }
 
         if(Str::contains($locationSlug, 'oceans')){
-            return view('pages.main.oceans', compact('location'));
+            return view('pages.main.oceans', compact('location', 'comments'));
         }
 
         if(Str::contains($locationSlug, 'seas')){
-            return view('pages.main.seas', compact('location'));
+            return view('pages.main.seas', compact('location', 'comments'));
         }
 
-        return view('pages.main.location', compact('location'));
+        return view('pages.main.location', compact('location', 'comments'));
     }
 
     /**

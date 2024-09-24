@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{asset('vendors/nice-select/css/nice-select.css')}}">
     <!-- main css -->
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <script src="{{asset('js/jquery-3.2.1.min.js')}}"></script>
 </head>
 
 <body>
