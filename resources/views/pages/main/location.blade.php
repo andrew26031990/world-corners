@@ -223,7 +223,7 @@
                         if (spaceLeft > spaceRight) {
                             img.style.margin = '12px 0px 18px 23px';
                         } else {
-                            img.style.margin = '12px 17px 18px -15px';
+                            img.style.margin = '12px 17px 18px 0px';
                         }
                     }
                 })
