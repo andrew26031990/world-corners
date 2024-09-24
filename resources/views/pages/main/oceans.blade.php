@@ -206,4 +206,32 @@
             </div>
         </div>
     </section>
+    <script>
+        function adjustMargins() {
+            const blocks = document.querySelectorAll('.blog_details');
+
+            blocks.forEach(block => {
+                const imgs = block.querySelectorAll('img');
+                imgs.forEach(img => {
+                    if (img) {
+                        const imgRect = img.getBoundingClientRect();
+                        const blockRect = block.getBoundingClientRect();
+
+                        const spaceLeft = imgRect.left - blockRect.left;
+                        const spaceRight = blockRect.right - imgRect.right;
+
+                        if (spaceLeft > spaceRight) {
+                            img.style.margin = '12px 0px 18px 23px';
+                        } else {
+                            img.style.margin = '12px 17px 18px -15px';
+                        }
+                    }
+                })
+            });
+        }
+
+        window.onload = adjustMargins;
+
+        window.addEventListener('resize', adjustMargins);
+    </script>
 @endsection

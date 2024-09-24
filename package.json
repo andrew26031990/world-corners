@@ -17,6 +17,7 @@
         "vite": "^5.0.11"
     },
     "dependencies": {
+        "@ckeditor/ckeditor5-ckfinder": "^43.1.0",
         "ckeditor": "^4.12.1",
         "froala-editor": "^4.1.4"
     }

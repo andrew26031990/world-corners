@@ -40,7 +40,7 @@ class Location extends Model
         //'slug' => 'required|string|max:255',
         'keywords' => 'required|string|max:255',
         'description' => 'required|string|max:255',
-        'text' => 'required|string|max:65535',
+        'text' => 'required|string',
         'short_text' => 'required|string|max:65535',
         'latitude' => 'required|numeric',
         'longitude' => 'required|numeric',

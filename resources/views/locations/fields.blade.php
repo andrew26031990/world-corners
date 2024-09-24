@@ -86,12 +86,32 @@
     });
 </script>
 <script>
-    ClassicEditor
-        .create( document.querySelector( '#text' ))
+    $(document).ready(function() {
+        $('#text').summernote();
+    });
+    /*ClassicEditor
+        .create( document.querySelector( '#text' ), {
+            toolbar: [
+                'heading', '|', 'bold', 'italic', '|',
+                'bulletedList', 'numberedList', '|',
+                'imageUpload', 'mediaEmbed', 'link', 'blockQuote', 'insertTable', '|',
+                'undo', 'redo', 'ckfinder'
+            ],
+            image: {
+                toolbar: [ 'imageTextAlternative', 'imageStyle:full', 'imageStyle:side' ],
+                styles: [
+                    'full', // изображение займет всю ширину
+                    'side'  // изображение будет обтекаться текстом
+                ]
+            },
+            alignment: {
+                options: [ 'left', 'right', 'center', 'justify' ]
+            }
+        })
         .then( editor => {
             console.log( editor );
         } )
         .catch( error => {
             console.error( error );
-        } );
+        } );*/
 </script>

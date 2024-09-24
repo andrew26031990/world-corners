@@ -206,87 +206,32 @@
             </div>
         </div>
     </section>
-@endsection
+    <script>
+        function adjustMargins() {
+            const blocks = document.querySelectorAll('.blog_details');
 
+            blocks.forEach(block => {
+                const imgs = block.querySelectorAll('img');
+                imgs.forEach(img => {
+                    if (img) {
+                        const imgRect = img.getBoundingClientRect();
+                        const blockRect = block.getBoundingClientRect();
 
-{{--
-@extends('welcome')
+                        const spaceLeft = imgRect.left - blockRect.left;
+                        const spaceRight = blockRect.right - imgRect.right;
 
-@section('content')
-    <h3 class="pb-4 mb-4 fst-italic border-bottom">
-        {{$location->title}}
-    </h3>
-
-    <article class="blog-post">
-        <p class="blog-post-meta">{{ \Carbon\Carbon::parse($location->created_at)->format('F j, Y') }}</p>
-
-        @php
-            $textLength = mb_strlen($location->text, 'UTF-8');
-            $halfLength = ceil($textLength / 2);
-            $firstHalf = mb_substr($location->text, 0, $halfLength, 'UTF-8');
-            $lastDotPosition = mb_strrpos($firstHalf, '.', 0, 'UTF-8');
-            if ($lastDotPosition !== false) {
-                $firstHalf = mb_substr($firstHalf, 1, $lastDotPosition, 'UTF-8');
-                $secondHalf = mb_substr($location->text, $lastDotPosition + 1, $textLength - $lastDotPosition - 1, 'UTF-8');
-            } else {
-                $secondHalf = mb_substr($location->text, $halfLength, $textLength - $halfLength, 'UTF-8');
-            }
-        @endphp
-
-        {!! '<' . $firstHalf !!}
-
-        --}}
-{{--<div style="width: 100%; height: 150px">
-            <!-- Yandex.RTB R-A-8796197-13 -->
-            <div id="yandex_rtb_R-A-8796197-13"></div>
-            <script>
-                window.yaContextCb.push(()=>{
-                    Ya.Context.AdvManager.render({
-                        "blockId": "R-A-8796197-13",
-                        "renderTo": "yandex_rtb_R-A-8796197-13"
-                    })
+                        if (spaceLeft > spaceRight) {
+                            img.style.margin = '12px 0px 18px 23px';
+                        } else {
+                            img.style.margin = '12px 17px 18px -15px';
+                        }
+                    }
                 })
-            </script>
-        </div>--}}{{--
+            });
+        }
 
+        window.onload = adjustMargins;
 
-        {!! $secondHalf !!}
-
-    </article>
-
-    <div style="margin-bottom: 15px"></div>
+        window.addEventListener('resize', adjustMargins);
+    </script>
 @endsection
-@section('sidebar')
-    <div class="position-sticky" style="top: 2rem;">
-        --}}
-{{--<div class="p-4 mb-3 bg-light rounded">
-            <!-- Yandex.RTB R-A-8796197-12 -->
-            <div id="yandex_rtb_R-A-8796197-12"></div>
-            <script>
-                window.yaContextCb.push(()=>{
-                    Ya.Context.AdvManager.render({
-                        "blockId": "R-A-8796197-12",
-                        "renderTo": "yandex_rtb_R-A-8796197-12"
-                    })
-                })
-            </script>
-        </div>--}}{{--
-
-
-        @include('pages.layouts.articles')
-
-        <div class="p-4">
-            <!-- Yandex.RTB R-A-8796197-11 -->
-            <div id="yandex_rtb_R-A-8796197-11"></div>
-            <script>
-                window.yaContextCb.push(()=>{
-                    Ya.Context.AdvManager.render({
-                        "blockId": "R-A-8796197-11",
-                        "renderTo": "yandex_rtb_R-A-8796197-11"
-                    })
-                })
-            </script>
-        </div>
-    </div>
-@endsection
---}}
