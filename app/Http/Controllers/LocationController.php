@@ -53,6 +53,18 @@ class LocationController extends AppBaseController
 
         $location = $this->locationRepository->create($input);
 
+        if ($request->hasFile('img')) {
+            $filePath = $request->file('img');//->store('images', 'public');
+            $imagePath = 'app/public/images/' . uniqid() . '.' . $filePath->getClientOriginalExtension();
+
+            Image::read($filePath)
+                ->resize(750, 350)
+                ->save(public_path($imagePath));
+
+            $location->img = $imagePath;
+            $location->save();
+        }
+
         Flash::success('Location saved successfully.');
 
         return redirect(route('locations.index'));
@@ -112,11 +124,11 @@ class LocationController extends AppBaseController
             }
 
             $filePath = $request->file('img');//->store('images', 'public');
-            $imagePath = 'images/' . uniqid() . '.' . $filePath->getClientOriginalExtension();
+            $imagePath = 'app/public/images/' . uniqid() . '.' . $filePath->getClientOriginalExtension();
 
             Image::read($filePath)
                 ->resize(750, 350)
-                ->save(storage_path('app/public/' . $imagePath));
+                ->save(storage_path($imagePath));
 
             $location->img = $imagePath;
             $location->save();
