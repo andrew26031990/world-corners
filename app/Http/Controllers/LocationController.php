@@ -55,11 +55,11 @@ class LocationController extends AppBaseController
 
         if ($request->hasFile('img')) {
             $filePath = $request->file('img');//->store('images', 'public');
-            $imagePath = 'app/public/images/' . uniqid() . '.' . $filePath->getClientOriginalExtension();
+            $imagePath = 'images/' . uniqid() . '.' . $filePath->getClientOriginalExtension();
 
             Image::read($filePath)
                 ->resize(750, 350)
-                ->save(public_path($imagePath));
+                ->save(public_path('app/public/'.$imagePath));
 
             $location->img = $imagePath;
             $location->save();
@@ -124,11 +124,11 @@ class LocationController extends AppBaseController
             }
 
             $filePath = $request->file('img');//->store('images', 'public');
-            $imagePath = 'app/public/images/' . uniqid() . '.' . $filePath->getClientOriginalExtension();
+            $imagePath = 'images/' . uniqid() . '.' . $filePath->getClientOriginalExtension();
 
             Image::read($filePath)
                 ->resize(750, 350)
-                ->save(storage_path($imagePath));
+                ->save(storage_path('app/public/'.$imagePath));
 
             $location->img = $imagePath;
             $location->save();
