@@ -44,7 +44,7 @@
                             @if($previousLocation)
                                 <div class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
                                     <div class="thumb">
-                                        <a href="#"><img class="img-fluid" src="{{url('img/blog/prev.jpg')}}" alt=""></a>
+                                        <a href="#"><img class="img-fluid" src="{{$previousLocation->img ? url('storage/'.$previousLocation->img) : public_path('img/blog/prev.jpg')}}" width="60" height="60" alt=""></a>
                                     </div>
                                     <div class="arrow">
                                         <a href="#"><span class="lnr text-white lnr-arrow-left"></span></a>
@@ -69,7 +69,7 @@
                                         <a href="#"><span class="lnr text-white lnr-arrow-right"></span></a>
                                     </div>
                                     <div class="thumb">
-                                        <a href="#"><img class="img-fluid" src="{{url('img/blog/next.jpg')}}" alt=""></a>
+                                        <a href="#"><img class="img-fluid" src="{{$nextLocation->img ? url('storage/'.$nextLocation->img) : public_path('img/blog/next.jpg')}}" alt=""></a>
                                     </div>
                                 </div>
                             @endif
