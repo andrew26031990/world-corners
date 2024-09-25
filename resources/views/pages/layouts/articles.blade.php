@@ -9,7 +9,7 @@
     <div class="br"></div>
 </aside>
 <aside class="single_sidebar_widget popular_post_widget">
-    <h3 class="widget_title">Popular Posts</h3>
+    <h3 class="widget_title">Popular Places</h3>
     @foreach(getArticles() as $key => $location)
         @if($key <= 3)
             <div class="media post_item">
@@ -26,7 +26,7 @@
     <div class="br"></div>
 </aside>
 <aside class="single_sidebar_widget post_category_widget">
-    <h4 class="widget_title">Post Categories</h4>
+    <h4 class="widget_title">Place Categories</h4>
     <ul class="list cat-list">
         @foreach(getCategoriesArticlesCount() as $category)
             @if($category->locations_count > 0)
