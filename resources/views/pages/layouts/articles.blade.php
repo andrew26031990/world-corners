@@ -57,7 +57,7 @@
                    placeholder="Enter email"
                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email'">
         </div>
-        <a href="#" class="bbtns">Subcribe</a>
+        <a href="#" class="bbtns subscription">Subcribe</a>
     </div>
     <p class="text-bottom">You can unsubscribe at any time</p>
     <div class="br"></div>

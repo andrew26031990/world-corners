@@ -49,18 +49,43 @@
                         comment: comment
                     },
                     success: function(response) {
-                        alert('Комментарий успешно сохранен!');
+                        alert('Comment successfully added!');
                         $('#name').val('');
                         $('#email').val('');
                         $('#parent_id').val('');
                         $('textarea[name="comment"]').val('');
                     },
                     error: function(xhr, status, error) {
-                        alert('Произошла ошибка: ' + error);
+                        alert('An error occured: ' + error);
                     }
                 });
             } else {
-                alert('Пожалуйста, заполните все поля!');
+                alert('Please fill in all fields!');
+            }
+        });
+
+        $('.subscription').on('click', function(e) {
+            e.preventDefault();
+
+            let email = $('#inlineFormInputGroup').val();
+
+            if (email) {
+                $.ajax({
+                    type: 'POST',
+                    url: '/api/subscribe',
+                    data: {
+                        email: email,
+                    },
+                    success: function(response) {
+                        alert(JSON.parse(response).message);
+                        $('#inlineFormInputGroup').val('');
+                    },
+                    error: function(xhr, status, error) {
+                        console.log('An error occured: ' + error);
+                    }
+                });
+            } else {
+                alert('Please fill in email field!');
             }
         });
     });

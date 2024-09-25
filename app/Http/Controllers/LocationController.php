@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\LocationCreated;
 use App\Http\Requests\CreateLocationRequest;
 use App\Http\Requests\UpdateLocationRequest;
 use App\Http\Controllers\AppBaseController;
@@ -59,11 +60,13 @@ class LocationController extends AppBaseController
 
             Image::read($filePath)
                 ->resize(750, 350)
-                ->save(public_path('app/public/'.$imagePath));
+                ->save(storage_path('app/public/'.$imagePath));
 
             $location->img = $imagePath;
             $location->save();
         }
+
+        event(new LocationCreated($location));
 
         Flash::success('Location saved successfully.');
 

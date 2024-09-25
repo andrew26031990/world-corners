@@ -42,7 +42,7 @@
                                 <li class="nav-item submenu dropdown">
                                     <a href="{{$item->slug}}" id="{{$item->id}}MegaMenu" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                                        aria-expanded="false">{{$item->name}}</a>
-                                    <ul class="dropdown-menu">
+                                    <ul class="dropdown-menu" style="min-width: 205px!important;">
                                         @foreach($item->children as $child)
                                             <li class="nav-item"><a class="nav-link" id="{{$child->id}}MegaMenu" href="{{$child->slug}}">{{$child->name}}</a></li>
                                         @endforeach
