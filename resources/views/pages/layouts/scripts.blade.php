@@ -77,7 +77,7 @@
                         email: email,
                     },
                     success: function(response) {
-                        alert(JSON.parse(response).message);
+                        alert('success');
                         $('#inlineFormInputGroup').val('');
                     },
                     error: function(xhr, status, error) {
