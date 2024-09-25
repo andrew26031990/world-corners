@@ -157,10 +157,6 @@
             </div>
         </div>
     </section>
+    @include('pages.layouts.scripts')
     <!--================Blog Area =================-->
-@endsection
-@section('sidebar')
-    <div class="position-sticky" style="top: 2rem;">
-        @include('pages.layouts.articles')
-    </div>
 @endsection
