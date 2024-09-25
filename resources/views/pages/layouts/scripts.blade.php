@@ -85,19 +85,19 @@
                         console.error('Ошибка AJAX:', status, error);
 
                         if (jqXHR.status === 0) {
-                            alert('Нет подключения к сети. Проверьте сеть.');
+                            console.error('Нет подключения к сети. Проверьте сеть.');
                         } else if (jqXHR.status === 404) {
-                            alert('Запрашиваемая страница не найдена. [404]');
+                            console.error('Запрашиваемая страница не найдена. [404]');
                         } else if (jqXHR.status === 500) {
-                            alert('Внутренняя ошибка сервера [500].');
+                            console.error('Внутренняя ошибка сервера [500].');
                         } else if (status === 'parsererror') {
-                            alert('Ошибка при разборе JSON.');
+                            console.error('Ошибка при разборе JSON.');
                         } else if (status === 'timeout') {
-                            alert('Время ожидания запроса истекло.');
+                            console.error('Время ожидания запроса истекло.');
                         } else if (status === 'abort') {
-                            alert('Запрос был отменен.');
+                            console.error('Запрос был отменен.');
                         } else {
-                            alert('Неизвестная ошибка: ' + jqXHR.responseText);
+                            console.error('Неизвестная ошибка: ' + jqXHR.responseText);
                         }
                     },
                     complete: function() {
