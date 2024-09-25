@@ -76,12 +76,32 @@
                     data: {
                         email: email,
                     },
+                    dataType: 'json',
                     success: function(response) {
-                        alert('success');
+                        alert(response.message);
                         $('#inlineFormInputGroup').val('');
                     },
-                    error: function(xhr, status, error) {
-                        console.log('An error occured: ' + error);
+                    error: function(jqXHR, status, error) {
+                        console.error('Ошибка AJAX:', status, error);
+
+                        if (jqXHR.status === 0) {
+                            alert('Нет подключения к сети. Проверьте сеть.');
+                        } else if (jqXHR.status === 404) {
+                            alert('Запрашиваемая страница не найдена. [404]');
+                        } else if (jqXHR.status === 500) {
+                            alert('Внутренняя ошибка сервера [500].');
+                        } else if (status === 'parsererror') {
+                            alert('Ошибка при разборе JSON.');
+                        } else if (status === 'timeout') {
+                            alert('Время ожидания запроса истекло.');
+                        } else if (status === 'abort') {
+                            alert('Запрос был отменен.');
+                        } else {
+                            alert('Неизвестная ошибка: ' + jqXHR.responseText);
+                        }
+                    },
+                    complete: function() {
+                        console.log('AJAX запрос завершен.');
                     }
                 });
             } else {
