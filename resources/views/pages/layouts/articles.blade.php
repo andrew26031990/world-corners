@@ -13,7 +13,7 @@
     @foreach(getArticles() as $key => $location)
         @if($key <= 3)
             <div class="media post_item">
-                <img src="{{$location->img ?? url('img/blog/popular-post/post1.jpg')}}" alt="post">
+                <img src="{{$location->img ? url('storage/'.$location->img) : url('img/blog/popular-post/post1.jpg')}}" alt="post">
                 <div class="media-body">
                     <a href="{{$location->slug}}">
                         <h3>{{\Str::limit($location->title, 30)}}</h3>
