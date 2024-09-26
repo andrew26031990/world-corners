@@ -5,6 +5,19 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="{{$location->description ?? "Исследуйте уголки мира, погрузитесь в культуру, природу и достопримечательности разных городов и стран."}}">
+    <meta name="keywords" content="{{$location->keywords ?? "уголки мира, путешествия, география, культура, достопримечательности, природа, города."}}">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="{{$location->title ?? config('app.name')}}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="{{asset('thumbnail.webp')}}" />
+    <meta property="og:url" content="{{config('app.url')}}" />
+    <meta property="og:locale" content="en_EN" />
+    <meta property="og:site_name" content="Amazing Places" />
+    <meta name="Published" content="{{$location->created_at ?? \Carbon\Carbon::now()}}">
+    <meta name="Modified" content="{{$location->updated_at ?? \Carbon\Carbon::now()}}">
+    <link rel="canonical" href="{{config('app.url')}}" />
     <link rel="icon" href="{{asset('img/favicon.png')}}" type="image/png">
     <title>Amazing places</title>
     <!-- Bootstrap CSS -->
@@ -174,7 +187,7 @@
             <div class="row">
                 <div class="col-lg-6 col-md-12">
                     <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                        Copyright &copy;{{\Carbon\Carbon::now()->format('Y')}} All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     </p>
                 </div>
@@ -242,8 +255,8 @@
     <meta property="og:type" content="article" />
     <meta property="og:image" content="{{asset('thumbnail.webp')}}" />
     <meta property="og:url" content="{{config('app.url')}}" />
-    <meta property="og:locale" content="ru_RU" />
-    <meta property="og:site_name" content="World Corners" />
+    <meta property="og:locale" content="en_EN" />
+    <meta property="og:site_name" content="Amazing Places" />
     <meta name="Published" content="{{$location->created_at ?? \Carbon\Carbon::now()}}">
     <meta name="Modified" content="{{$location->updated_at ?? \Carbon\Carbon::now()}}">
 
