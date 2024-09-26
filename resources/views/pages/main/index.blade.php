@@ -80,11 +80,11 @@
                                     <div class="blog_post">
                                         <img src="img/blog/main-blog/m-blog-1.jpg" alt="">
                                         <div class="blog_details">
-                                            <a href="{{$location->slug}}">
+                                            <a href="{{$location->slug}}" aria-label="Go to article">
                                                 <h2>{{$location->title}}</h2>
                                             </a>
                                             <p>{{$location->short_text}}</p>
-                                            <a href="{{$location->slug}}" class="blog_btn">View More</a>
+                                            <a href="{{$location->slug}}" aria-label="Go to article" class="blog_btn">View More</a>
                                         </div>
                                     </div>
                                 </div>
@@ -149,7 +149,7 @@
                     <div class="blog_right_sidebar">
                         @include('pages.layouts.articles')
                         <aside class="single_sidebar_widget ads_widget">
-                            <a href="#"><img class="img-fluid" src="{{url('img/blog/add.jpg')}}" width="300" height="250" alt=""></a>
+                            <a href="#" aria-label="Ads click"><img class="img-fluid" src="{{url('img/blog/add.jpg')}}" width="300" height="250" alt=""></a>
                             <div class="br"></div>
                         </aside>
                     </div>

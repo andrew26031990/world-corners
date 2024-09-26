@@ -14,8 +14,8 @@
                         <div class="col-lg-3  col-md-3">
                             <div class="blog_info text-right">
                                 <ul class="blog_meta list">
-                                    <li><a href="#">{{\Carbon\Carbon::parse($location->created_at)->format('F j, Y')}}<i class="lnr lnr-calendar-full"></i></a></li>
-                                    <li><a href="#">{{str_pad($comments->count(), 2, '0', STR_PAD_LEFT)}} Comments<i class="lnr lnr-bubble"></i></a></li>
+                                    <li><a href="#" aria-label="Date">{{\Carbon\Carbon::parse($location->created_at)->format('F j, Y')}}<i class="lnr lnr-calendar-full"></i></a></li>
+                                    <li><a href="#" aria-label="Comments">{{str_pad($comments->count(), 2, '0', STR_PAD_LEFT)}} Comments<i class="lnr lnr-bubble"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -44,14 +44,14 @@
                             @if($previousLocation)
                                 <div class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
                                     <div class="thumb">
-                                        <a href="#"><img class="img-fluid" src="{{$previousLocation->img ? url('storage/'.$previousLocation->img) : public_path('img/blog/prev.jpg')}}" width="60" height="60" alt=""></a>
+                                        <a href="#" aria-label="Go to previous article"><img class="img-fluid" src="{{$previousLocation->img ? url('storage/'.$previousLocation->img) : public_path('img/blog/prev.jpg')}}" width="60" height="60" alt=""></a>
                                     </div>
                                     <div class="arrow">
                                         <a href="#"><span class="lnr text-white lnr-arrow-left"></span></a>
                                     </div>
                                     <div class="detials">
                                         <p>Prev Post</p>
-                                        <a href="{{$previousLocation->slug}}">
+                                        <a href="{{$previousLocation->slug}}" aria-label="Go to previous article">
                                             <h4>{{\Str::limit($previousLocation->title, 37)}}</h4>
                                         </a>
                                     </div>
@@ -61,15 +61,15 @@
                                 <div class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
                                     <div class="detials">
                                         <p>Next Post</p>
-                                        <a href="{{$nextLocation->slug}}">
+                                        <a href="{{$nextLocation->slug}}" aria-label="Go to next article">
                                             <h4>{{\Str::limit($nextLocation->title, 37)}}</h4>
                                         </a>
                                     </div>
                                     <div class="arrow">
-                                        <a href="#"><span class="lnr text-white lnr-arrow-right"></span></a>
+                                        <a href="#" aria-label="Go to next article"><span class="lnr text-white lnr-arrow-right"></span></a>
                                     </div>
                                     <div class="thumb">
-                                        <a href="#"><img class="img-fluid" src="{{$nextLocation->img ? url('storage/'.$nextLocation->img) : public_path('img/blog/next.jpg')}}" width="60" height="60" alt=""></a>
+                                        <a href="#" aria-label="Go to next article"><img class="img-fluid" src="{{$nextLocation->img ? url('storage/'.$nextLocation->img) : public_path('img/blog/next.jpg')}}" width="60" height="60" alt=""></a>
                                     </div>
                                 </div>
                             @endif
@@ -81,7 +81,7 @@
                     <div class="blog_right_sidebar">
                         @include('pages.layouts.articles')
                         <aside class="single_sidebar_widget ads_widget">
-                            <a href="#"><img class="img-fluid" src="{{url('img/blog/add.jpg')}}" width="300" height="250" alt=""></a>
+                            <a href="#" aria-label="Ads click"><img class="img-fluid" src="{{url('img/blog/add.jpg')}}" width="300" height="250" alt=""></a>
                             <div class="br"></div>
                         </aside>
                     </div>

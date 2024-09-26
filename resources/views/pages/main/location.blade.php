@@ -14,8 +14,8 @@
                         <div class="col-lg-3  col-md-3">
                             <div class="blog_info text-right">
                                 <ul class="blog_meta list">
-                                    <li><a href="#">{{\Carbon\Carbon::parse($location->created_at)->format('F j, Y')}}<i class="lnr lnr-calendar-full"></i></a></li>
-                                    <li><a href="#">{{str_pad($comments->count(), 2, '0', STR_PAD_LEFT)}} Comments<i class="lnr lnr-bubble"></i></a></li>
+                                    <li><a href="#" aria-label="Date">{{\Carbon\Carbon::parse($location->created_at)->format('F j, Y')}}<i class="lnr lnr-calendar-full"></i></a></li>
+                                    <li><a href="#" aria-label="Comments">{{str_pad($comments->count(), 2, '0', STR_PAD_LEFT)}} Comments<i class="lnr lnr-bubble"></i></a></li>
                                 </ul>
                             </div>
                         </div>

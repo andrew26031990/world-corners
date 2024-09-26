@@ -15,7 +15,7 @@
             <div class="media post_item">
                 <img src="{{$location->img ? url('storage/'.$location->img) : url('img/blog/popular-post/post1.jpg')}}" width="100" height="60" alt="post">
                 <div class="media-body">
-                    <a href="{{$location->slug}}">
+                    <a href="{{$location->slug}}" aria-label="Go to article">
                         <h3>{{\Str::limit($location->title, 30)}}</h3>
                     </a>
                     <p>{{$location->created_at->diffForHumans()}}</p>
@@ -31,7 +31,7 @@
         @foreach(getCategoriesArticlesCount() as $category)
             @if($category->locations_count > 0)
                 <li>
-                    <a href="{{$category->slug}}" class="d-flex justify-content-between">
+                    <a href="{{$category->slug}}" aria-label="Go to category" class="d-flex justify-content-between">
                         <p>{{$category->name}}</p>
                         <p>{{$category->locations_count}}</p>
                     </a>
@@ -57,7 +57,7 @@
                    placeholder="Enter email"
                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email'">
         </div>
-        <a href="#" class="bbtns subscription">Subcribe</a>
+        <a href="#" class="bbtns subscription" aria-label="Subscribe">Subcribe</a>
     </div>
     <p class="text-bottom">You can unsubscribe at any time</p>
     <div class="br"></div>
