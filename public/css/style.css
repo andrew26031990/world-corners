@@ -525,7 +525,7 @@ button:focus {
 /* Home Banner Area css
 ============================================================================================ */
 .home_banner_area {
-  background: url(../img/banner/home-banner.png) no-repeat center center;
+  background: url(../img/banner/home-banner.webp) no-repeat center center;
   background-size: cover;
   min-height: 900px; }
   @media (max-width: 991px) {
