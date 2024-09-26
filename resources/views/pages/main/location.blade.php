@@ -8,7 +8,7 @@
                     <div class="single-post row">
                         <div class="col-lg-12">
                             <div class="feature-img">
-                                <img class="img-fluid" src="{{$location->img ? url('storage/'.$location->img) : public_path('img/blog/feature-img1.jpg')}}" alt="">
+                                <img class="img-fluid" src="{{$location->img ? url('storage/'.$location->img) : public_path('img/blog/feature-img1.jpg')}}" width="750" height="350" alt="">
                             </div>
                         </div>
                         <div class="col-lg-3  col-md-3">
@@ -69,7 +69,7 @@
                                         <a href="#"><span class="lnr text-white lnr-arrow-right"></span></a>
                                     </div>
                                     <div class="thumb">
-                                        <a href="#"><img class="img-fluid" src="{{$nextLocation->img ? url('storage/'.$nextLocation->img) : public_path('img/blog/next.jpg')}}" alt=""></a>
+                                        <a href="#"><img class="img-fluid" src="{{$nextLocation->img ? url('storage/'.$nextLocation->img) : public_path('img/blog/next.jpg')}}" width="60" height="60" alt=""></a>
                                     </div>
                                 </div>
                             @endif
@@ -81,7 +81,7 @@
                     <div class="blog_right_sidebar">
                         @include('pages.layouts.articles')
                         <aside class="single_sidebar_widget ads_widget">
-                            <a href="#"><img class="img-fluid" src="{{url('img/blog/add.jpg')}}" alt=""></a>
+                            <a href="#"><img class="img-fluid" src="{{url('img/blog/add.jpg')}}" width="300" height="250" alt=""></a>
                             <div class="br"></div>
                         </aside>
                     </div>

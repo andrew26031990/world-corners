@@ -149,7 +149,7 @@
                     <div class="blog_right_sidebar">
                         @include('pages.layouts.articles')
                         <aside class="single_sidebar_widget ads_widget">
-                            <a href="#"><img class="img-fluid" src="{{url('img/blog/add.jpg')}}" alt=""></a>
+                            <a href="#"><img class="img-fluid" src="{{url('img/blog/add.jpg')}}" width="300" height="250" alt=""></a>
                             <div class="br"></div>
                         </aside>
                     </div>

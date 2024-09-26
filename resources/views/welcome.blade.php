@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="{{asset('vendors/nice-select/css/nice-select.css')}}">
     <!-- main css -->
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="preload" fetchpriority="high" as="image" href="{{public_path('img/banner/home-banner.webp')}}" type="image/webp">
     <script src="{{asset('js/jquery-3.2.1.min.js')}}"></script>
 </head>
 
@@ -40,7 +41,7 @@
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
-                <a class="navbar-brand logo_h" href="/"><img src="{{asset('img/logo.webp')}}" style="width: 94px" alt=""></a>
+                <a class="navbar-brand logo_h" href="/"><img src="{{asset('img/logo.webp')}}" style="width: 94px" width="94" alt=""></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="icon-bar"></span>
@@ -71,7 +72,7 @@
                             <a href="#" class="primary-btn">Book a trip</a>
                         </li>
                         <li class="nav-item">
-                            <button type="button" class="search nav-link">
+                            <button type="button" class="search nav-link" aria-label="Search posts">
                                 <i class="lnr lnr-magnifier" id="search"></i>
                             </button>
                         </li>
@@ -84,7 +85,7 @@
             <div class="container">
                 <form class="d-flex justify-content-between">
                     <input type="text" class="form-control" id="search_input" placeholder="Search Here">
-                    <button type="submit" class="btn"></button>
+                    <button type="submit" class="btn" aria-label="Search posts"></button>
                     <span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
                 </form>
             </div>
@@ -154,7 +155,7 @@
                                 <div class="d-flex flex-row">
                                     <input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '"
                                            required="" type="email">
-                                    <button class="click-btn btn btn-default"><span class="lnr lnr-location" aria-hidden="true"></span></button>
+                                    <button class="click-btn btn btn-default" aria-label="Subscribe to our newsletter"><span class="lnr lnr-location" aria-hidden="true"></span></button>
                                     <div style="position: absolute; left: -5000px;">
                                         <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
                                     </div>

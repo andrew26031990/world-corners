@@ -3,7 +3,7 @@
         <input type="text" class="form-control" placeholder="Search Posts">
         <span class="input-group-btn">
                                     <button class="btn btn-default" type="button"><i
-                                            class="lnr lnr-magnifier"></i></button>
+                                            class="lnr lnr-magnifier" aria-label="Search posts"></i></button>
                                 </span>
     </div><!-- /input-group -->
     <div class="br"></div>
