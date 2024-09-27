@@ -126,6 +126,7 @@
         });
 
         let timeout;
+        let searchResults = document.getElementById('search_results_box');
         document.getElementById('search_input_box').addEventListener('keydown', function(event) {
             clearTimeout(timeout);
             clearResults();
@@ -137,7 +138,7 @@
                     xhr.onload = function() {
                         if (xhr.status >= 200 && xhr.status < 400) {
                             var data = JSON.parse(xhr.responseText);
-                            var searchResults = document.getElementById('search_results_box');
+
                             var container = '<div class="container">';
                             for (let i = 0; i < data['locations'].length; i++) {
                                 console.log(data['locations'][i].slug);
