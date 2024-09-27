@@ -137,7 +137,7 @@
                     xhr.onload = function() {
                         if (xhr.status >= 200 && xhr.status < 400) {
                             var data = JSON.parse(xhr.responseText);
-                            var searchResults = document.getElementById('search_input_box');
+                            var searchResults = document.getElementById('search_results_box');
                             var container = '<div class="container">';
                             for (let i = 0; i < data['locations'].length; i++) {
                                 console.log(data['locations'][i].slug);
@@ -168,7 +168,7 @@
         });
 
         function clearResults() {
-            var searchResults = document.getElementById('search_input_box');
+            var searchResults = document.getElementById('search_results_box');
             searchResults.innerHTML = '';
         }
     });
