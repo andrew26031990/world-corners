@@ -186,7 +186,7 @@
                                 </div>--}}
                                 <div class="col-md-12">
                                     <div class="blog_post">
-                                        <img src="img/blog/main-blog/m-blog-1.jpg" alt="">
+                                        <img src="{{$location->img ? url('storage/'.$location->img) : 'img/blog/main-blog/m-blog-1.jpg'}}" alt="">
                                         <div class="blog_details">
                                             <a href="{{$location->slug}}">
                                                 <h2>{{$location->title}}</h2>
