@@ -152,7 +152,7 @@
                                     '</div>';
                             }
                             container += '</div>';
-                            searchResults.innerHTML(container)
+                            searchResults.html(container)
                         } else {
                             console.error('Request failed with status:', xhr.status);
                         }
