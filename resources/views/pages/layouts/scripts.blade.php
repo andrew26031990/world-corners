@@ -153,7 +153,7 @@
                                     '</div>';
                             }
                             container += '</div>';
-                            searchResults.html(container)
+                            searchResults.insertAdjacentHTML('beforeend', container)
                         } else {
                             console.error('Request failed with status:', xhr.status);
                         }
