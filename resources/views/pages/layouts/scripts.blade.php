@@ -124,5 +124,52 @@
                 alert('Please fill in email field!');
             }
         });
+
+        let timeout;
+        document.getElementById('search-input').addEventListener('keydown', function(event) {
+            clearTimeout(timeout);
+            clearResults();
+
+            if(event.target.value.length > 1){
+                timeout = setTimeout(function() {
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('GET', "/api/search-locations/" + encodeURIComponent(event.target.value), true);
+                    xhr.onload = function() {
+                        if (xhr.status >= 200 && xhr.status < 400) {
+                            var data = JSON.parse(xhr.responseText);
+                            var searchResults = document.getElementById('search_input_box');
+                            var container = '<div class="container">';
+                            for (let i = 0; i < data['locations'].length; i++) {
+                                console.log(data['locations'][i].slug);
+                                container +=
+                                    '<div class="media post_item">' +
+                                        '<img src="' + window.location.origin + '/storage/' + data['locations'][i].img + '" width="100" height="60" alt="post">' +
+                                        '<div class="media-body">' +
+                                            '<a href="' + window.location.origin + '/' + data['locations'][i].slug + '" aria-label="Go to article" style="float: left; margin-left: 30px; margin-top: 10px;">' +
+                                                '<h3>' + data['locations'][i].title + '</h3>' +
+                                            '</a>' +
+                                        '</div>' +
+                                    '</div>';
+                            }
+                            container += '</div>';
+                            searchResults.append(container)
+                        } else {
+                            console.error('Request failed with status:', xhr.status);
+                        }
+                    };
+
+                    xhr.onerror = function() {
+                        console.error('Network request failed');
+                    };
+
+                    xhr.send();
+                }, 300);
+            }
+        });
+
+        function clearResults() {
+            var searchResults = document.getElementById('search_input_box');
+            searchResults.innerHTML = '';
+        }
     });
 </script>
