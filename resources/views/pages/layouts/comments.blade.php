@@ -64,8 +64,8 @@
         </div>
         <div class="form-group">
             <textarea class="form-control mb-10" rows="5" name="comment" placeholder="Message"
-                      onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'" required=""></textarea>
+                      onfocus="this.placeholder = ''" onblur="this.placeholder = 'Message'" required=""></textarea>
         </div>
-        <a href="#" class="primary-btn">Post Comment</a>
+        <a href="#" class="primary-btn post_comment">Post Comment</a>
     </form>
 </div>

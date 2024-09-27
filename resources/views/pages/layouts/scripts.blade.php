@@ -28,7 +28,7 @@
 </script>
 <script>
     $(document).ready(function() {
-        $('.primary-btn').on('click', function(e) {
+        $('.post_comment').on('click', function(e) {
             e.preventDefault();
 
             var name = $('#name').val();
@@ -55,8 +55,24 @@
                         $('#parent_id').val('');
                         $('textarea[name="comment"]').val('');
                     },
-                    error: function(xhr, status, error) {
-                        alert('An error occured: ' + error);
+                    error: function(jqXHR, status, error) {
+                        console.log('AJAX Error: ' + error);
+
+                        if (jqXHR.status === 0) {
+                            alert('Network error. Check network connection');
+                        } else if (jqXHR.status === 404) {
+                            alert('Page not found');
+                        } else if (jqXHR.status === 500) {
+                            alert('Internal server error [500].');
+                        } else if (status === 'parsererror') {
+                            alert('Parse jsonm error.');
+                        } else if (status === 'timeout') {
+                            alert('Request timeout');
+                        } else if (status === 'abort') {
+                            alert('Request was canceled.');
+                        } else {
+                            alert('Unknown error: ' + jqXHR.responseText);
+                        }
                     }
                 });
             } else {
@@ -82,22 +98,22 @@
                         $('#inlineFormInputGroup').val('');
                     },
                     error: function(jqXHR, status, error) {
-                        console.error('Ошибка AJAX:', status, error);
+                        console.error('AJAX Error:', status, error);
 
                         if (jqXHR.status === 0) {
-                            console.error('Нет подключения к сети. Проверьте сеть.');
+                            alert('Network error. Check network connection');
                         } else if (jqXHR.status === 404) {
-                            console.error('Запрашиваемая страница не найдена. [404]');
+                            alert('Page not found');
                         } else if (jqXHR.status === 500) {
-                            console.error('Внутренняя ошибка сервера [500].');
+                            alert('Internal server error [500].');
                         } else if (status === 'parsererror') {
-                            console.error('Ошибка при разборе JSON.');
+                            alert('Parse jsonm error.');
                         } else if (status === 'timeout') {
-                            console.error('Время ожидания запроса истекло.');
+                            alert('Request timeout');
                         } else if (status === 'abort') {
-                            console.error('Запрос был отменен.');
+                            alert('Request was canceled.');
                         } else {
-                            console.error('Неизвестная ошибка: ' + jqXHR.responseText);
+                            alert('Unknown error: ' + jqXHR.responseText);
                         }
                     },
                     complete: function() {
