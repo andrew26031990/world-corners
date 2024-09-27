@@ -45,7 +45,7 @@ class Location extends Model
         'short_text' => 'required|string|max:65535',
         'latitude' => 'required|numeric',
         'longitude' => 'required|numeric',
-        'img' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+        'img' => 'image|mimes:jpeg,png,jpg,gif,webp,avif|max:2048',
         'deleted_at' => 'nullable',
         'created_at' => 'nullable',
         'updated_at' => 'nullable'
