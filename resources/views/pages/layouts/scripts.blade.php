@@ -126,7 +126,7 @@
         });
 
         let timeout;
-        document.getElementById('search-input').addEventListener('keydown', function(event) {
+        document.getElementById('search_input_box').addEventListener('keydown', function(event) {
             clearTimeout(timeout);
             clearResults();
 
