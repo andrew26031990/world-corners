@@ -145,14 +145,14 @@
                                     '<div class="media post_item">' +
                                         '<img src="' + window.location.origin + '/storage/' + data['locations'][i].img + '" width="100" height="60" alt="post">' +
                                         '<div class="media-body">' +
-                                            '<a href="' + window.location.origin + '/' + data['locations'][i].slug + '" aria-label="Go to article" style="float: left; margin-left: 30px; margin-top: 10px;">' +
+                                            '<a href="' + window.location.origin + '' + data['locations'][i].slug + '" aria-label="Go to article" style="float: left; margin-left: 30px; margin-top: 10px;">' +
                                                 '<h3>' + data['locations'][i].title + '</h3>' +
                                             '</a>' +
                                         '</div>' +
                                     '</div>';
                             }
                             container += '</div>';
-                            searchResults.append(container)
+                            searchResults.innerHTML(container)
                         } else {
                             console.error('Request failed with status:', xhr.status);
                         }
