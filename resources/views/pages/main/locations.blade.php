@@ -265,5 +265,6 @@
             </div>
         </div>
     </section>
+    @include('pages.layouts.scripts')
     <!--================Blog Area =================-->
 @endsection
