@@ -90,7 +90,7 @@
                 </form>
             </div>
         </div>
-        <div class="search_input search_results" id="search_input_box" style="top: 151px;">
+        <div class="search_input search_results" id="search_input_box" style="top: 151px;display: none">
 
         </div>
     </div>
